@@ -29,4 +29,3 @@
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/scripts.js"></script>
 </head>
 <body>
-	<?php get_sidebar(); ?>

@@ -1,9 +1,62 @@
 @import 'variables';
 @import 'mixins';
 
-body{ width: 100%; height: 100%; margin: 0; padding: 0; }
+body{ 
+	height: 100%; 
+	margin: 0; 
+	padding: 5% 25% 5% 5%; 
+	border-left: 10px solid $brown;
+	color: #333;
+	background: #FFF;
+}
+
+h1, h2, h3, h4, h5, h6{
+	margin: 0;
+	padding: 0;
+	line-height: 1em;
+	font-family: 'CaviarDreamsBold';
+}
+
+p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 
 .container{
 	width: auto;
 	position: relative;
 }
+
+/** Styles for Single Post Pages **/
+.single{
+	.header{
+		.category{
+			color: $category-color;
+		}
+		.title{ 
+			padding: 0 10% 0 0 ;
+			font-size: 4em; 
+			color: $title-color; 
+		}
+		.meta{
+			margin: 20px 0;
+
+			span{ font-size: 2em; color: $subheading-color; }
+			.author{
+				&:before{
+					content: 'by';
+					margin: 0 10px;
+					color: #CCC;
+				}
+			}
+		}
+	}
+
+	.content{
+		p{ 
+			margin: 0 0 20px;
+			font-size: 1.5em; 
+			line-height: 1.5em; 
+			color: $normal-color; 
+			display: inline-block;
+		}
+	}
+}
+/** ---- End Single Styles ---- **/
