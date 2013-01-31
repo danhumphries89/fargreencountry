@@ -40,5 +40,10 @@
 					</a>
 				<?php endforeach; ?>
 			</p>
+		</div>
+
+		<div class="comments">
+			<?php comments_template( '', true ); ?>
+		</div>
 	</footer>
 </div>

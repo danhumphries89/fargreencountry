@@ -78,17 +78,59 @@ p, span, em, a {
           padding: 5px 10px;
           background: #a1b99d;
           color: #FFF;
-          float: left;
-          border-right: 1px solid #888888; }
+          float: left; }
         .single .footer .meta p a {
           text-decoration: none; }
           .single .footer .meta p a span {
             background: #AAA;
-            margin-right: 2px;
+            margin-left: 2px;
             border-right: none; }
           .single .footer .meta p a:hover {
             text-decoration: underline; }
             .single .footer .meta p a:hover span {
               background: #888; }
+    .single .footer .comments {
+      margin: 20px 0;
+      display: inline-block;
+      position: relative; }
+      .single .footer .comments h2 {
+        padding: 20px 0;
+        font-size: 3em;
+        font-family: 'CaviarDreamsBold';
+        color: #a1b99d;
+        border-top: 1px solid #eeeeee;
+        border-bottom: 1px solid #eeeeee;
+        background: #F9F9F9; }
+      .single .footer .comments .comments-list {
+        margin: 40px 0 0;
+        padding: 0;
+        list-style: none; }
+        .single .footer .comments .comments-list .comment {
+          margin: 0 0 20px; }
+          .single .footer .comments .comments-list .comment .comment-header h3 {
+            color: #888;
+            font-size: 2.5em; }
+          .single .footer .comments .comments-list .comment .comment-header .comment-meta {
+            margin: 5px 0 20px; }
+            .single .footer .comments .comments-list .comment .comment-header .comment-meta span {
+              color: #AAA;
+              font-size: 1.5em; }
+            .single .footer .comments .comments-list .comment .comment-header .comment-meta .time:before {
+              content: 'at';
+              margin-right: 5px;
+              color: #CCC; }
+          .single .footer .comments .comments-list .comment .comment-header .reply a {
+            margin-left: 20px;
+            color: #a1b99d;
+            text-decoration: none; }
+            .single .footer .comments .comments-list .comment .comment-header .reply a:hover {
+              text-decoration: underline; }
+          .single .footer .comments .comments-list .comment .comment-content {
+            color: #666666;
+            font-size: 1.25em;
+            line-height: 1.5em;
+            font-family: 'CaviarDreamsRegular'; }
+      .single .footer .comments .children {
+        list-style: none; }
 
 /** ---- End Single Styles ---- **/
