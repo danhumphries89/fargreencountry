@@ -69,6 +69,13 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 	}
 
 	.content{
+		.excerpt{
+			p{
+				font-family: 'CaviarDreamsItalic';
+				color: $normal-color; 
+				font-size: 1.5em;
+			}
+		}
 		p{ 
 			margin: 0 0 20px;
 			font-size: 1.5em; 

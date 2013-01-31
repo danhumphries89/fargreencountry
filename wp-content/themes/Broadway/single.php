@@ -19,6 +19,9 @@
 		</div>
 	</header>
 	<section class="content">
+		<div class="excerpt">
+			<?php the_excerpt(); ?>
+		</div>
 		<?php the_content(); ?>
 	</section>
 	<footer class="footer">
