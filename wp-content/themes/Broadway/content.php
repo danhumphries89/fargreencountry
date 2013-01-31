@@ -10,8 +10,11 @@
 	$backgroundImage = (isset($metadata['background_image'][0])) ? $metadata['background_image'][0] : "";
 	$backgroundURL = "images/" . $backgroundImage;
 
+	//get the categories attached to the current post
+	$categories = get_the_category( $post->ID );
 ?>
-<article class="mainposts post <?php echo ($backgroundImage) ? 'background' : ''; ?>" <?php if($backgroundImage) : ?> style="background-image: url(<?php echo $backgroundURL; ?>);"<?php endif; ?>>
+<article class="post">
+	<span class="category-title <?php echo $categories[0]->slug; ?>"><?php echo $categories[0]->name; ?></span>
 	<header class="header">
 		<a href="<?php the_permalink(); ?>">
 			<h2 class="title"><?php the_title(); ?></h2>

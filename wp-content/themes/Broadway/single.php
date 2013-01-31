@@ -10,7 +10,7 @@
 	$tags = get_the_tags( $post->ID );
 ?>
 
-<div class="single mainposts">
+<div class="single post">
 	<header class="header">
 		<h1 class="title"><?php the_title(); ?></h1>
 		<div class="meta">
