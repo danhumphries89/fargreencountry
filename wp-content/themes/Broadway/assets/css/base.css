@@ -35,102 +35,139 @@ p, span, em, a {
     background: #F9F9F9;
     border-color: #DDD; }
 
-/** Styles for Single Post Pages **/
-.single {
+.post-collection {
   margin: 10% 0; }
-  .single .header {
+
+/** Styles for Posts **/
+.mainposts {
+  margin: 0 0 10%;
+  overflow: hidden; }
+  .mainposts .header {
     margin: 0 0 20px;
     display: inline-block; }
-    .single .header .category {
+    .mainposts .header .category {
       color: #448d33; }
-    .single .header .title {
+    .mainposts .header a {
+      text-decoration: none; }
+      .mainposts .header a:hover .title {
+        color: #444;
+        -webkit-transition: all linear 0.1s; }
+    .mainposts .header .title {
       padding: 0 10% 0 0;
       font-size: 4em;
       color: #a1b99d; }
-    .single .header .meta {
+    .mainposts .header .meta {
       margin: 20px 0; }
-      .single .header .meta span {
+      .mainposts .header .meta span {
         font-size: 2em;
         color: #aaaaaa; }
-      .single .header .meta .author:before {
+      .mainposts .header .meta .author:before {
         content: 'by';
         margin: 0 10px;
         color: #CCC; }
-  .single .content .excerpt p {
+  .mainposts .content .excerpt p {
     font-family: 'CaviarDreamsItalic';
     color: #666666;
     font-size: 1.5em; }
-  .single .content p {
+  .mainposts .content p {
     margin: 0 0 20px;
     font-size: 1.5em;
     line-height: 1.5em;
     color: #666666;
     display: inline-block; }
-  .single .footer {
+  .mainposts .content a {
+    color: #a1b99d;
+    text-decoration: none; }
+    .mainposts .content a:hover {
+      color: #444;
+      -webkit-transition: all linear 0.2s; }
+  .mainposts .footer {
     overflow: hidden; }
-    .single .footer .meta {
+    .mainposts .footer .meta {
       margin: 25px 0; }
-      .single .footer .meta p {
+      .mainposts .footer .meta p {
         margin: 0 0 10px;
         display: block;
         overflow: hidden; }
-        .single .footer .meta p span {
+        .mainposts .footer .meta p span {
           padding: 5px 10px;
           background: #a1b99d;
           color: #FFF;
           float: left; }
-        .single .footer .meta p a {
+        .mainposts .footer .meta p a {
           text-decoration: none; }
-          .single .footer .meta p a span {
+          .mainposts .footer .meta p a span {
             background: #AAA;
             margin-left: 2px;
             border-right: none; }
-          .single .footer .meta p a:hover {
+          .mainposts .footer .meta p a:hover {
             text-decoration: underline; }
-            .single .footer .meta p a:hover span {
+            .mainposts .footer .meta p a:hover span {
               background: #888; }
-    .single .footer .comments {
+      .mainposts .footer .meta .continue-reading {
+        margin: 0;
+        padding: 0; }
+    .mainposts .footer .comments {
+      width: 100%;
       margin: 20px 0;
       display: inline-block;
       position: relative; }
-      .single .footer .comments h2 {
+      .mainposts .footer .comments h2 {
         padding: 20px 0;
         font-size: 3em;
         font-family: 'CaviarDreamsBold';
         color: #a1b99d;
         border-top: 1px solid #eeeeee;
         border-bottom: 1px solid #eeeeee;
-        background: #F9F9F9; }
-      .single .footer .comments .comments-list {
+        background: #FCFCFC; }
+      .mainposts .footer .comments .comments-list {
         margin: 40px 0 0;
         padding: 0;
         list-style: none; }
-        .single .footer .comments .comments-list .comment {
-          margin: 0 0 20px; }
-          .single .footer .comments .comments-list .comment .comment-header h3 {
-            color: #888;
-            font-size: 2.5em; }
-          .single .footer .comments .comments-list .comment .comment-header .comment-meta {
-            margin: 5px 0 20px; }
-            .single .footer .comments .comments-list .comment .comment-header .comment-meta span {
-              color: #AAA;
-              font-size: 1.5em; }
-            .single .footer .comments .comments-list .comment .comment-header .comment-meta .time:before {
-              content: 'at';
-              margin-right: 5px;
-              color: #CCC; }
-          .single .footer .comments .comments-list .comment .comment-header .reply a {
-            margin-left: 20px;
-            color: #a1b99d;
-            text-decoration: none; }
-            .single .footer .comments .comments-list .comment .comment-header .reply a:hover {
-              text-decoration: underline; }
-          .single .footer .comments .comments-list .comment .comment-content {
+        .mainposts .footer .comments .comments-list .comment {
+          margin: 0 0 20px;
+          padding: 0 0 20px;
+          border-bottom: 1px solid #eeeeee; }
+          .mainposts .footer .comments .comments-list .comment .comment-header {
+            width: 100%; }
+            .mainposts .footer .comments .comments-list .comment .comment-header h3 {
+              color: #888;
+              font-size: 2.5em; }
+            .mainposts .footer .comments .comments-list .comment .comment-header .comment-meta {
+              margin: 5px 0 20px; }
+              .mainposts .footer .comments .comments-list .comment .comment-header .comment-meta span {
+                color: #AAA;
+                font-size: 1.5em; }
+              .mainposts .footer .comments .comments-list .comment .comment-header .comment-meta .time:before {
+                content: 'at';
+                margin-right: 5px;
+                color: #CCC; }
+            .mainposts .footer .comments .comments-list .comment .comment-header .reply a {
+              margin-left: 20px;
+              color: #a1b99d;
+              text-decoration: none; }
+              .mainposts .footer .comments .comments-list .comment .comment-header .reply a:hover {
+                text-decoration: underline; }
+          .mainposts .footer .comments .comments-list .comment .comment-content {
             color: #666666;
             font-size: 1.25em;
             line-height: 1.5em;
             font-family: 'CaviarDreamsRegular'; }
-      .single .footer .comments .children {
+      .mainposts .footer .comments .children {
         list-style: none; }
 
-/** ---- End Single Styles ---- **/
+.background {
+  height: 400px;
+  padding-left: 280px;
+  background-position: 0 0;
+  background-repeat: no-repeat; }
+  .background .header .title {
+    width: 100%;
+    font-size: 3em; }
+  .background .content .excerpt p {
+    font-size: 1.35em; }
+
+.single {
+  margin: 10% 0; }
+
+/** ---- End Post Styles ---- **/

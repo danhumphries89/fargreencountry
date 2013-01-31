@@ -1,11 +1,9 @@
 <?php get_header(); ?>
 <div class="container">
 
-	<div class="posts">
+	<div class="post-collection <?php echo (is_home()) ? 'home' : ''; ?>">
 		<?php while( have_posts() ) : the_post(); ?>
-		<div class="post item-<?php the_ID(); ?>">
 			<?php get_template_part( 'content' ); ?>
-		</div>
 		<?php endwhile; ?>
 	</div>
 

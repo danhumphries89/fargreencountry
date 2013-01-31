@@ -37,9 +37,12 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 	&:hover{ background: #F9F9F9; border-color: #DDD; }
 }
 
-/** Styles for Single Post Pages **/
-.single{
-	margin: 10% 0;
+.post-collection{ margin: 10% 0; }
+
+/** Styles for Posts **/
+.mainposts{
+	margin: 0 0 10%;
+	overflow: hidden;	
 
 	.header{
 		
@@ -49,10 +52,13 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 		.category{
 			color: $category-color;
 		}
+		
+		a{ text-decoration: none; &:hover{ .title{ color: #444; -webkit-transition: all linear 0.1s; } } }
+
 		.title{ 
 			padding: 0 10% 0 0 ;
 			font-size: 4em; 
-			color: $title-color; 
+			color: $title-color;
 		}
 		.meta{
 			margin: 20px 0;
@@ -83,6 +89,12 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 			color: $normal-color; 
 			display: inline-block;
 		}
+		a{
+			color: $title-color;
+			text-decoration: none;
+
+			&:hover{ color: #444; -webkit-transition: all linear 0.2s; }
+		}
 	}
 
 	.footer{
@@ -109,21 +121,24 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 					}
 				}
 			}
+			.continue-reading{ margin: 0; padding: 0; }
 		}
 		.comments{
 
+			width: 100%;
 			margin: 20px 0;
 			display: inline-block;
 			position: relative;
 
 			h2{ 
+
 				padding: 20px 0;
 				font-size: 3em; 
 				font-family: 'CaviarDreamsBold'; 
 				color: $title-color;
 				border-top: 1px solid #EEE;
 				border-bottom: 1px solid #EEE;
-				background: #F9F9F9;
+				background: #FCFCFC;
 			}
 
 			.comments-list{
@@ -134,8 +149,11 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 				.comment{
 
 					margin: 0 0 20px;
+					padding: 0 0 20px;
+					border-bottom: 1px solid #EEE;
 
 					.comment-header{
+						width: 100%; 
 						h3{ color: #888; font-size: 2.5em; }
 
 						.comment-meta{
@@ -164,5 +182,17 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 			.children{ list-style: none; }
 		}
 	}
+} 
+.background{
+	height: 400px;
+	padding-left: 280px;
+	background-position: 0 0;
+	background-repeat: no-repeat; 
+
+	.header{ .title{ width: 100%; font-size: 3em; } }
+	.content{ .excerpt{ p{ font-size: 1.35em; } } }
 }
-/** ---- End Single Styles ---- **/
+
+.single{ margin: 10% 0; }
+
+/** ---- End Post Styles ---- **/

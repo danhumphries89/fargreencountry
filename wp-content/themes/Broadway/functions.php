@@ -1,5 +1,22 @@
 <?php 
 
+/** Ensure that post-thumbnails can be added to the site **/
+add_theme_support( 'post-thumbnails' ); 
+
+/** Add Twitter to the Author Contact Details **/
+function add_twitter_contactmethod( $contactmethods ) {
+
+  if ( !isset( $contactmethods['twitter'] ) )
+    $contactmethods['twitter'] = 'Twitter';
+
+  // Remove Yahoo IM
+  if ( isset($contactmethods['yim'] ))
+	unset( $contactmethods['yim'] );
+  	return $contactmethods;
+}
+add_filter( 'user_contactmethods', 'add_twitter_contactmethod', 10, 1 );
+
+/** Change normal Wordpress Comments to new design **/
 function comments_callback($comment, $args, $depth){
 	$GLOBALS['comment'] = $comment;
 	extract($args, EXTR_SKIP); ?>
