@@ -3,8 +3,7 @@
 body {
   height: 100%;
   margin: 0;
-  padding: 5% 25% 5% 5%;
-  border-left: 10px solid #b58b79;
+  padding: 0 15%;
   color: #333;
   background: #FFF; }
 
@@ -22,27 +21,70 @@ p, span, em, a {
   width: auto;
   position: relative; }
 
+.menu {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transition: all linear 0.2s; }
+  .menu:hover {
+    background: #F9F9F9;
+    border-color: #DDD; }
+
 /** Styles for Single Post Pages **/
-.single .header .category {
-  color: #448d33; }
-.single .header .title {
-  padding: 0 10% 0 0;
-  font-size: 4em;
-  color: #a1b99d; }
-.single .header .meta {
-  margin: 20px 0; }
-  .single .header .meta span {
-    font-size: 2em;
-    color: #aaaaaa; }
-  .single .header .meta .author:before {
-    content: 'by';
-    margin: 0 10px;
-    color: #CCC; }
-.single .content p {
-  margin: 0 0 20px;
-  font-size: 1.5em;
-  line-height: 1.5em;
-  color: #666666;
-  display: inline-block; }
+.single {
+  margin: 10% 0; }
+  .single .header {
+    margin: 0 0 20px;
+    display: inline-block; }
+    .single .header .category {
+      color: #448d33; }
+    .single .header .title {
+      padding: 0 10% 0 0;
+      font-size: 4em;
+      color: #a1b99d; }
+    .single .header .meta {
+      margin: 20px 0; }
+      .single .header .meta span {
+        font-size: 2em;
+        color: #aaaaaa; }
+      .single .header .meta .author:before {
+        content: 'by';
+        margin: 0 10px;
+        color: #CCC; }
+  .single .content p {
+    margin: 0 0 20px;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    color: #666666;
+    display: inline-block; }
+  .single .footer {
+    overflow: hidden; }
+    .single .footer .meta {
+      margin: 25px 0; }
+      .single .footer .meta p {
+        margin: 0 0 10px;
+        display: block;
+        overflow: hidden; }
+        .single .footer .meta p span {
+          padding: 5px 10px;
+          background: #a1b99d;
+          color: #FFF;
+          float: left;
+          border-right: 1px solid #888888; }
+        .single .footer .meta p a {
+          text-decoration: none; }
+          .single .footer .meta p a span {
+            background: #AAA;
+            margin-right: 2px;
+            border-right: none; }
+          .single .footer .meta p a:hover {
+            text-decoration: underline; }
+            .single .footer .meta p a:hover span {
+              background: #888; }
 
 /** ---- End Single Styles ---- **/
