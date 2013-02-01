@@ -29,3 +29,9 @@
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/scripts.js"></script>
 </head>
 <body>
+
+	<header class="main_header">
+		<div class="menu">
+			<?php wp_nav_menu( array('menu' => 'mainmenu' )); ?>
+		</div>
+	</header>

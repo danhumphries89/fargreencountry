@@ -1,5 +1,13 @@
 <?php 
 
+/** Add theme support for custom menus **/
+function registerMenus() {
+  register_nav_menus(
+  	array( 'mainmenu' => __( 'Main Menu' ) )
+  );
+}
+add_action( 'init', 'registerMenus' );
+
 /** Ensure that post-thumbnails can be added to the site **/
 add_theme_support( 'post-thumbnails' ); 
 
