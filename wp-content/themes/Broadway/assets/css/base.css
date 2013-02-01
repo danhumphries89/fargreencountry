@@ -50,7 +50,7 @@ p, span, em, a {
     position: absolute;
     top: 0;
     left: 0; }
-  .post .review {
+  .post .thoughts {
     background: #a1b99d; }
   .post .news {
     background: #666666; }
@@ -61,11 +61,11 @@ p, span, em, a {
     .post .header a {
       text-decoration: none; }
       .post .header a:hover .title {
-        color: #666; }
+        color: #888; }
     .post .header .title {
       padding: 5px 10% 0 0;
       font-size: 4em;
-      color: #444;
+      color: #AEB29E;
       -webkit-transition: all linear 0.2s; }
     .post .header .meta {
       margin: 10px 0; }
@@ -168,6 +168,11 @@ p, span, em, a {
         list-style: none; }
 
 .single {
-  margin: 10% 0; }
+  width: auto;
+  padding: 5% 15%; }
+  .single .header .title {
+    padding-top: 0px; }
+  .single .header .meta {
+    margin: 20px 0; }
 
 /** ---- End Post Styles ---- **/

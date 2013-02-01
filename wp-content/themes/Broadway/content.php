@@ -1,8 +1,4 @@
 <?php 
-	//add the content to a variable to extract the first two paragraphs
-	$thecontent = apply_filters( 'the_content', get_the_content() );
-	$content_paragraphs = explode("</p>", $thecontent);
-
 	//get the meta data for the current post item
 	$metadata = get_post_meta( $post->ID );
 
@@ -20,17 +16,13 @@
 			<h2 class="title"><?php the_title(); ?></h2>
 		</a>
 		<div class="meta">
-			<span class="date"><?php the_date(); ?></span>
+			<span class="date"><?php echo get_the_date(); ?></span>
 			<span class="author"><?php the_author(); ?></span>
 		</div>
 	</header>
 	<section class="content">
 		<div class="excerpt"> <?php the_excerpt(); ?> </div>
 	</section>
-
-	<footer class="footer">
-
-	</footer>
 </article>
 
 <?php
