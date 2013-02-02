@@ -2,9 +2,7 @@
 
 /** Add theme support for custom menus **/
 function registerMenus() {
-  register_nav_menus(
-  	array( 'mainmenu' => __( 'Main Menu' ) )
-  );
+  register_nav_menus( array('mainmenu' => __( 'Main Menu' )) );
 }
 add_action( 'init', 'registerMenus' );
 

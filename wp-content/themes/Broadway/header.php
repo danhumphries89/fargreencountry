@@ -31,7 +31,20 @@
 <body>
 
 	<header class="main_header">
-		<div class="menu">
-			<?php wp_nav_menu( array('menu' => 'mainmenu' )); ?>
+		<div class="container">
+			<h1 class="title">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo_test.png" />
+				<p class="title_words">
+					<span>Far Green</span>
+					<span>Country</span>
+				</p>
+			</h1>
+			<?php 
+				wp_nav_menu( array(
+					'menu' => 'mainmenu',
+					'container' => '',
+					'menu_id' => 'mainmenu'
+				)); 
+			?>
 		</div>
 	</header>
