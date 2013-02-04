@@ -125,7 +125,7 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 
 /** Content Container **/
 .content_container{
-	padding: 30px 0 0;
+	padding: 30px 0 5%;
 	position: relative;
 	overflow: hidden;	
 
@@ -220,7 +220,7 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 .footer{
 
 	width: auto;
-	padding: 5% 0 0;
+	padding: 20px 0 0;
 	overflow: hidden; 
 
 	.comments{
@@ -288,9 +288,10 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 .single {
 	.content_container{ 
 		width: auto; 
-		padding: 5% 14%; 
+		padding: 5% 14% 0; 
 		.header{
 			.meta{ margin: 20px 0;}
 		}
 	}
 }
+.single{ article.features{ padding-bottom: 5%; } }

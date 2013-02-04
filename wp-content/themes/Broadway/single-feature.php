@@ -16,7 +16,7 @@
 <div class="background-image" style="background-image: url(<?php echo $post_source[0]; ?>);"></div>
 <span class="single-tag features">Features</span>
 
-<article class="content_container featured post">
+<article class="content_container features post">
 	<header class="header">
 		<h1 class="title"><?php the_title(); ?></h1>
 		<div class="meta">
@@ -58,7 +58,7 @@
 <div class="background-image last" style="background-image: url(<?php echo $secondary_source; ?>);"></div>
 <span class="single-tag features">Comments & Discussions</span>
 
-<section class="footer">
+<section class="footer features">
 	<div class="comments">
 		<?php comments_template( '', true ); ?>
 	</div>

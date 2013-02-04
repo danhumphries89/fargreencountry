@@ -110,7 +110,7 @@ p, span, em, a {
 
 /** Content Container **/
 .content_container {
-  padding: 30px 0 0;
+  padding: 30px 0 5%;
   position: relative;
   overflow: hidden; }
   .content_container .category-title {
@@ -188,7 +188,7 @@ p, span, em, a {
 
 .footer {
   width: auto;
-  padding: 5% 0 0;
+  padding: 20px 0 0;
   overflow: hidden; }
   .footer .comments {
     width: 100%;
@@ -241,6 +241,9 @@ p, span, em, a {
 
 .single .content_container {
   width: auto;
-  padding: 5% 14%; }
+  padding: 5% 14% 0; }
   .single .content_container .header .meta {
     margin: 20px 0; }
+
+.single article.features {
+  padding-bottom: 5%; }

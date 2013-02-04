@@ -23,7 +23,7 @@
 		</div>
 		<?php the_content(); ?>
 	</section>
-	<footer class="footer">
+	<footer class="article-footer">
 		<div class="meta">
 			<?php if(!empty($source)) : ?>
 			<p class="source">
@@ -45,9 +45,11 @@
 			</p>
 			<?php endif; ?>
 		</div>
-
-		<div class="comments">
-			<?php comments_template( '', true ); ?>
-		</div>
 	</footer>
-</div>
+</article>
+
+<section class="footer">
+	<div class="comments">
+		<?php comments_template( '', true ); ?>
+	</div>
+</section>
