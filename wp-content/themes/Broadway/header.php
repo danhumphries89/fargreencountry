@@ -30,7 +30,7 @@
 </head>
 <body>
 
-	<header class="main_header">
+	<header class="main_header <?php echo $inCurrentCategory; ?>">
 		<div class="container">
 			<h1 class="title">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo_test.png" />

@@ -25,7 +25,9 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 }
 .main_header{
 
-	height: 100px;
+	height: 105px;
+	background: #FCFCFC;
+	border-bottom: 1px solid #EEE;
 
 	.container{
 
@@ -52,32 +54,34 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 
 		.menu{
 			width: auto;
-			margin: 35px 0 0;
+			margin: 34px 0 0;
 			padding: 0;
 			overflow: hidden;
 			list-style: none;
 
 			.menu-item{
+				margin: 0 10px 0 0;
 				float: left;
 
 				a{
 					width: auto;
-					margin: 0 20px 0 0;
+					margin: 0;
 					padding: 5px 20px;
 					color: #999;
-					border-bottom: 1px solid #FFF;
 					font-size: 1em;
 					text-decoration: none;
 					text-align: center;
 					-webkit-transition: all linear 0.1s;
 					display: block;
 
-					&:hover{ border-bottom: 1px solid #666; color: #666; }
+					&:hover{ color: #666; }
 				}
+
+				&:last-child{ margin-right: 0px; }
 			}
 			.current-menu-parent,
 			.current-menu-item{ 
-				a{ color: #666; border-bottom: 1px solid #666; }
+				a{ color: #666; }
 			}
 		}
 	}
@@ -238,7 +242,7 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 } 
 .single{ 
 	width: auto; 
-	padding: 5% 15%; 
+	padding: 5% 14%; 
 
 	.header{
 		.title{ padding-top: 0px; }

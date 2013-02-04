@@ -23,7 +23,9 @@ p, span, em, a {
   position: relative; }
 
 .main_header {
-  height: 100px; }
+  height: 105px;
+  background: #FCFCFC;
+  border-bottom: 1px solid #eeeeee; }
   .main_header .container {
     padding: 20px 14% 0; }
     .main_header .container .title {
@@ -45,30 +47,30 @@ p, span, em, a {
           display: block; }
     .main_header .container .menu {
       width: auto;
-      margin: 35px 0 0;
+      margin: 34px 0 0;
       padding: 0;
       overflow: hidden;
       list-style: none; }
       .main_header .container .menu .menu-item {
+        margin: 0 10px 0 0;
         float: left; }
         .main_header .container .menu .menu-item a {
           width: auto;
-          margin: 0 20px 0 0;
+          margin: 0;
           padding: 5px 20px;
           color: #999;
-          border-bottom: 1px solid white;
           font-size: 1em;
           text-decoration: none;
           text-align: center;
           -webkit-transition: all linear 0.1s;
           display: block; }
           .main_header .container .menu .menu-item a:hover {
-            border-bottom: 1px solid #666666;
             color: #666; }
+        .main_header .container .menu .menu-item:last-child {
+          margin-right: 0px; }
       .main_header .container .menu .current-menu-parent a,
       .main_header .container .menu .current-menu-item a {
-        color: #666;
-        border-bottom: 1px solid #666666; }
+        color: #666; }
 
 /** Styles for Posts **/
 .post {
@@ -201,7 +203,7 @@ p, span, em, a {
 
 .single {
   width: auto;
-  padding: 5% 15%; }
+  padding: 5% 14%; }
   .single .header .title {
     padding-top: 0px; }
   .single .header .meta {
