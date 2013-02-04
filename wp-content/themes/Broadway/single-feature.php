@@ -12,10 +12,9 @@
 	$tags = get_the_tags( $post->ID );
 ?>
 
-<div class="single-meta">
-</div>
 
 <div class="background-image" style="background-image: url(<?php echo $post_source[0]; ?>);"></div>
+<span class="single-tag features">Features</span>
 
 <article class="content_container featured post">
 	<header class="header">
@@ -57,6 +56,7 @@
 </article>
 
 <div class="background-image last" style="background-image: url(<?php echo $secondary_source; ?>);"></div>
+<span class="single-tag features">Comments & Discussions</span>
 
 <section class="footer">
 	<div class="comments">

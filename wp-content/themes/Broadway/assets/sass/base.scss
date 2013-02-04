@@ -104,6 +104,15 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 }
 .last{ height: 650px; border-top: 10px solid $brown; }
 
+.background-image + .single-tag{ 
+	margin: -35px 0 0;
+	padding: 5px 10px;
+	color: #FFF;
+	position: absolute;
+	left: 14%;
+}
+.background-image + .single-tag.features{ background: $brown; }
+
 /** Content Container **/
 .content_container{
 	padding: 30px 0 0;
