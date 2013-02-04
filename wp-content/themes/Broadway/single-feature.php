@@ -7,12 +7,13 @@
 
 	//get the post featured imae
 	$post_source = str_replace("-150x150", "", wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID )) );
-
-	
-
+	$secondary_source = $meta['comments_featured'][0];
 	//get the tags for the current post
 	$tags = get_the_tags( $post->ID );
 ?>
+
+<div class="single-meta">
+</div>
 
 <div class="background-image" style="background-image: url(<?php echo $post_source[0]; ?>);"></div>
 
@@ -30,7 +31,7 @@
 		</div>
 		<?php the_content(); ?>
 	</section>
-	<footer class="footer">
+	<footer class="article-footer">
 		<div class="meta">
 			<?php if(!empty($source)) : ?>
 			<p class="source">
@@ -52,9 +53,13 @@
 			</p>
 			<?php endif; ?>
 		</div>
-
-		<div class="comments">
-			<?php comments_template( '', true ); ?>
-		</div>
 	</footer>
-</div>
+</article>
+
+<div class="background-image last" style="background-image: url(<?php echo $secondary_source; ?>);"></div>
+
+<section class="footer">
+	<div class="comments">
+		<?php comments_template( '', true ); ?>
+	</div>
+</section>

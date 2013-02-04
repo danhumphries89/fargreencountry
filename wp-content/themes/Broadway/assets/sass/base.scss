@@ -92,9 +92,20 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 
 /** End Main Header **/
 
+/** Background Image **/
+.background-image{
+	width: 100%;
+	height: 510px;
+	background-size: 100%;
+	background-attachment: fixed;
+	background-position: 0 -80px;
+	background-repeat: no-repeat;
+	border-bottom: 10px solid $brown;
+}
+.last{ height: 650px; border-top: 10px solid $brown; }
+
 /** Content Container **/
 .content_container{
-		margin: 0 0 5%;
 	padding: 30px 0 0;
 	position: relative;
 	overflow: hidden;	
@@ -159,9 +170,9 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 		}
 	}
 
-	.footer{
+	.article-footer{
 
-		overflow: hidden;
+
 		.meta{
 			margin: 25px 0;
 			p{
@@ -185,64 +196,82 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 			}
 			.continue-reading{ margin: 0; padding: 0; }
 		}
-		.comments{
+	}
+}
+.footer{
 
-			width: 100%;
-			margin: 20px 0;
-			display: inline-block;
-			position: relative;
+	width: auto;
+	padding: 5% 0 0;
+	overflow: hidden; 
 
-			h2{ 
+	.comments{
 
-				padding: 20px 0;
-				font-size: 3em; 
-				font-family: 'CaviarDreamsBold'; 
-				color: $title-color;
-				border-top: 1px solid #EEE;
+		width: 100%;
+		margin: 20px 0;
+		display: inline-block;
+		position: relative;
+
+		h2{ 
+
+			padding: 20px 14%;
+			font-size: 3em; 
+			font-family: 'CaviarDreamsBold'; 
+			color: $title-color;
+			border-top: 1px solid #EEE;
+			border-bottom: 1px solid #EEE;
+			background: #FCFCFC;
+		}
+
+		.comments-list{
+			margin: 40px 14% 0;
+			padding: 0;
+			list-style: none;
+
+			.comment{
+
+				margin: 0 0 20px;
+				padding: 0 0 20px;
 				border-bottom: 1px solid #EEE;
-				background: #FCFCFC;
-			}
 
-			.comments-list{
-				margin: 40px 0 0;
-				padding: 0;
-				list-style: none;
+				.comment-header{
+					width: 100%; 
+					h3{ color: #888; font-size: 2.5em; }
 
-				.comment{
-
-					margin: 0 0 20px;
-					padding: 0 0 20px;
-					border-bottom: 1px solid #EEE;
-
-					.comment-header{
-						width: 100%; 
-						h3{ color: #888; font-size: 2.5em; }
-
-						.comment-meta{
-							margin: 5px 0 20px; 
-							span{ color: #AAA; font-size: 1.5em; }
-							.time{ &:before{ content: 'at'; margin-right: 5px; color: #CCC; }}
-						}
-						.reply{
-							a{
-								margin-left: 20px;
-								color: $title-color;
-								text-decoration: none;
-								&:hover{ text-decoration: underline; }
-							}
-						}
+					.comment-meta{
+						margin: 5px 0 20px; 
+						span{ color: #AAA; font-size: 1.5em; }
+						.time{ &:before{ content: 'at'; margin-right: 5px; color: #CCC; }}
 					}
-
-					.comment-content{
-						color: $normal-color;
-						font-size: 1.25em;
-						line-height: 1.5em;
-						font-family: 'CaviarDreamsRegular';
+					.reply{
+						a{
+							margin-left: 20px;
+							color: $title-color;
+							text-decoration: none;
+							&:hover{ text-decoration: underline; }
+						}
 					}
 				}
+
+				.comment-content{
+					color: $normal-color;
+					font-size: 1.25em;
+					line-height: 1.5em;
+					font-family: 'CaviarDreamsRegular';
+				}
 			}
-			.children{ list-style: none; }
+		}
+		.children{ list-style: none; }
+	}
+}
+
+
+//Single Pages Only
+.single {
+	.content_container{ 
+		width: auto; 
+		padding: 5% 14%; 
+		.header{
+			.meta{ margin: 20px 0;}
 		}
 	}
 }
-.single .content_container{ width: auto; padding: 5% 14% 0; }

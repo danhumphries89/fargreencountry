@@ -77,9 +77,22 @@ p, span, em, a {
   display: none; }
 
 /** End Main Header **/
+/** Background Image **/
+.background-image {
+  width: 100%;
+  height: 510px;
+  background-size: 100%;
+  background-attachment: fixed;
+  background-position: 0 -80px;
+  background-repeat: no-repeat;
+  border-bottom: 10px solid #b58b79; }
+
+.last {
+  height: 650px;
+  border-top: 10px solid #b58b79; }
+
 /** Content Container **/
 .content_container {
-  margin: 0 0 5%;
   padding: 30px 0 0;
   position: relative;
   overflow: hidden; }
@@ -131,81 +144,86 @@ p, span, em, a {
     .content_container .content a:hover {
       color: #444;
       -webkit-transition: all linear 0.2s; }
-  .content_container .footer {
-    overflow: hidden; }
-    .content_container .footer .meta {
-      margin: 25px 0; }
-      .content_container .footer .meta p {
-        margin: 0 0 10px;
-        display: block;
-        overflow: hidden; }
-        .content_container .footer .meta p span {
-          padding: 5px 10px;
-          background: #a1b99d;
-          color: #FFF;
-          float: left; }
-        .content_container .footer .meta p a {
-          text-decoration: none; }
-          .content_container .footer .meta p a span {
-            background: #AAA;
-            margin-left: 2px;
-            border-right: none; }
-          .content_container .footer .meta p a:hover {
-            text-decoration: underline; }
-            .content_container .footer .meta p a:hover span {
-              background: #888; }
-      .content_container .footer .meta .continue-reading {
-        margin: 0;
-        padding: 0; }
-    .content_container .footer .comments {
-      width: 100%;
-      margin: 20px 0;
-      display: inline-block;
-      position: relative; }
-      .content_container .footer .comments h2 {
-        padding: 20px 0;
-        font-size: 3em;
-        font-family: 'CaviarDreamsBold';
-        color: #a1b99d;
-        border-top: 1px solid #eeeeee;
-        border-bottom: 1px solid #eeeeee;
-        background: #FCFCFC; }
-      .content_container .footer .comments .comments-list {
-        margin: 40px 0 0;
-        padding: 0;
-        list-style: none; }
-        .content_container .footer .comments .comments-list .comment {
-          margin: 0 0 20px;
-          padding: 0 0 20px;
-          border-bottom: 1px solid #eeeeee; }
-          .content_container .footer .comments .comments-list .comment .comment-header {
-            width: 100%; }
-            .content_container .footer .comments .comments-list .comment .comment-header h3 {
-              color: #888;
-              font-size: 2.5em; }
-            .content_container .footer .comments .comments-list .comment .comment-header .comment-meta {
-              margin: 5px 0 20px; }
-              .content_container .footer .comments .comments-list .comment .comment-header .comment-meta span {
-                color: #AAA;
-                font-size: 1.5em; }
-              .content_container .footer .comments .comments-list .comment .comment-header .comment-meta .time:before {
-                content: 'at';
-                margin-right: 5px;
-                color: #CCC; }
-            .content_container .footer .comments .comments-list .comment .comment-header .reply a {
-              margin-left: 20px;
-              color: #a1b99d;
-              text-decoration: none; }
-              .content_container .footer .comments .comments-list .comment .comment-header .reply a:hover {
-                text-decoration: underline; }
-          .content_container .footer .comments .comments-list .comment .comment-content {
-            color: #666666;
-            font-size: 1.25em;
-            line-height: 1.5em;
-            font-family: 'CaviarDreamsRegular'; }
-      .content_container .footer .comments .children {
-        list-style: none; }
+  .content_container .article-footer .meta {
+    margin: 25px 0; }
+    .content_container .article-footer .meta p {
+      margin: 0 0 10px;
+      display: block;
+      overflow: hidden; }
+      .content_container .article-footer .meta p span {
+        padding: 5px 10px;
+        background: #a1b99d;
+        color: #FFF;
+        float: left; }
+      .content_container .article-footer .meta p a {
+        text-decoration: none; }
+        .content_container .article-footer .meta p a span {
+          background: #AAA;
+          margin-left: 2px;
+          border-right: none; }
+        .content_container .article-footer .meta p a:hover {
+          text-decoration: underline; }
+          .content_container .article-footer .meta p a:hover span {
+            background: #888; }
+    .content_container .article-footer .meta .continue-reading {
+      margin: 0;
+      padding: 0; }
+
+.footer {
+  width: auto;
+  padding: 5% 0 0;
+  overflow: hidden; }
+  .footer .comments {
+    width: 100%;
+    margin: 20px 0;
+    display: inline-block;
+    position: relative; }
+    .footer .comments h2 {
+      padding: 20px 14%;
+      font-size: 3em;
+      font-family: 'CaviarDreamsBold';
+      color: #a1b99d;
+      border-top: 1px solid #eeeeee;
+      border-bottom: 1px solid #eeeeee;
+      background: #FCFCFC; }
+    .footer .comments .comments-list {
+      margin: 40px 14% 0;
+      padding: 0;
+      list-style: none; }
+      .footer .comments .comments-list .comment {
+        margin: 0 0 20px;
+        padding: 0 0 20px;
+        border-bottom: 1px solid #eeeeee; }
+        .footer .comments .comments-list .comment .comment-header {
+          width: 100%; }
+          .footer .comments .comments-list .comment .comment-header h3 {
+            color: #888;
+            font-size: 2.5em; }
+          .footer .comments .comments-list .comment .comment-header .comment-meta {
+            margin: 5px 0 20px; }
+            .footer .comments .comments-list .comment .comment-header .comment-meta span {
+              color: #AAA;
+              font-size: 1.5em; }
+            .footer .comments .comments-list .comment .comment-header .comment-meta .time:before {
+              content: 'at';
+              margin-right: 5px;
+              color: #CCC; }
+          .footer .comments .comments-list .comment .comment-header .reply a {
+            margin-left: 20px;
+            color: #a1b99d;
+            text-decoration: none; }
+            .footer .comments .comments-list .comment .comment-header .reply a:hover {
+              text-decoration: underline; }
+        .footer .comments .comments-list .comment .comment-content {
+          color: #666666;
+          font-size: 1.25em;
+          line-height: 1.5em;
+          font-family: 'CaviarDreamsRegular'; }
+    .footer .comments .children {
+      list-style: none; }
 
 .single .content_container {
   width: auto;
-  padding: 5% 14% 0; }
+  padding: 5% 14%; }
+  .single .content_container .header .meta {
+    margin: 20px 0; }
