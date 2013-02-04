@@ -72,7 +72,7 @@
 			'category_name' => $current_category[1]->name,
 			'orderby' => 'published',
 			'order' => 'ASC',
-			'posts_per_page' => '2'
+			'posts_per_page' => '8'
 		));
 
 		//count the number of items in the query array
@@ -80,17 +80,25 @@
 
 		//basic post counter
 		$counter = 1;
+		$click_limit = round(($feature_items / 2), 0, PHP_ROUND_HALF_DOWN);
 	?>
-	<?php while($feature_stream->have_posts()) : $feature_stream->the_post(); ?>
-		<article class="stream-items items<?php echo $feature_items; ?> <?php echo ($currentPostID == get_the_ID()) ? 'active' : ''; ?>">	
-			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-			<span class="date"><?php echo get_the_date(); ?></span>
-			<div class="excerpt">
-				<?php the_excerpt(); ?>
-			</div>
-		</article>
-	<?php $counter++; endwhile; wp_reset_query(); ?>
+	<script type="text/javascript"> var clicks_limit = <?php echo $click_limit; ?>; </script>
 
+	<div class="stream_item_container">
+		<?php while($feature_stream->have_posts()) : $feature_stream->the_post(); ?>
+			<article class="stream-items items<?php echo $feature_items; ?> <?php echo ($currentPostID == get_the_ID()) ? 'active' : ''; ?>">	
+				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+				<span class="date"><?php echo get_the_date(); ?></span>
+				<div class="excerpt">
+					<?php the_excerpt(); ?>
+				</div>
+			</article>
+		<?php $counter++; endwhile; wp_reset_query(); ?>
+	</div>
+	<ul class="feature-stream-nav">
+		<li><a href="javascript:void(0);" class="prev">Prev</a></li>
+		<li><a href="javascript:void(0);" class="next">Next</a></li>
+	</ul>
 </section>
 
 <div class="background-image last" style="background-image: url(<?php echo $secondary_source; ?>);"></div>

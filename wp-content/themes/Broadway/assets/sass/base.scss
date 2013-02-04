@@ -218,31 +218,39 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 
 /** Features Story Styles **/
 .feature-stream{
+	
+	width: auto;
 	padding: 5% 14%;
 	overflow: hidden;
 
-	.items2{ width: 43%; }
+	.stream_item_container{
+		width: 4000px;
+		left: 0;
+		position: relative;
+		overflow: hidden;
 
-	.stream-items{
-		margin-right: 5%;
-		padding: 20px;
-		float: left;
-		opacity: 0.5;
-		border-top: 5px solid $brown;
-		-webkit-transition: opacity linear 0.2s;
+		.stream-items{
+			width: 425px;
+			margin-right: 50px;
+			padding: 20px;
+			float: left;
+			opacity: 0.5;
+			border-top: 5px solid $brown;
+			-webkit-transition: opacity linear 0.2s;
+			zoom: 1;
 
-		h2{
-			font-size: 2em; 
-			line-height: 1em; 
-			a{ color: #666; text-decoration: none; -webkit-transition: color linear 0.2s; &:hover{ color: #333; } }
+			h2{
+				font-size: 2em; 
+				line-height: 1em; 
+				a{ color: #666; text-decoration: none; -webkit-transition: color linear 0.2s; &:hover{ color: #333; } }
+			}
+			.date{ margin: 10px 0 0; font-size: 1.5em; color: #AAA; display: block; }
+			.excerpt p{ color: #888; font-size: 1em; line-height: 1.5em; }
+
+			&:hover{ opacity: 1; }
 		}
-		.date{ margin: 10px 0 0; font-size: 1.5em; color: #AAA; display: block; }
-		.excerpt p{ color: #888; font-size: 1em; line-height: 1.5em; }
-
-		&:hover{ opacity: 1; }
-		&:last-child{ float: right; margin-right: 0; }
+		.active{ opacity: 1; }
 	}
-	.active{ opacity: 1; }
 }
 //features story
 
