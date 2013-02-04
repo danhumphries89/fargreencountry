@@ -9,7 +9,7 @@
 	//get the categories attached to the current post
 	$categories = get_the_category( $post->ID );
 ?>
-<article class="post">
+<article class="content_container post">
 	<span class="category-title <?php echo $categories[0]->slug; ?>"><?php echo $categories[0]->name; ?></span>
 	<header class="header">
 		<a href="<?php the_permalink(); ?>">

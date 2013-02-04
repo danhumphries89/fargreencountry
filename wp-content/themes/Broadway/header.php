@@ -28,9 +28,9 @@
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/scripts.js"></script>
 </head>
-<body>
+<body <?php body_class(); ?>>
 
-	<header class="main_header <?php echo $inCurrentCategory; ?>">
+	<header class="main_header">
 		<div class="container">
 			<h1 class="title">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo_test.png" />

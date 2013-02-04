@@ -23,6 +23,8 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 	padding: 5% 14%;
 	position: relative;
 }
+
+/** Main Header Styles **/
 .main_header{
 
 	height: 105px;
@@ -86,10 +88,13 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 		}
 	}
 }
+.single{ .main_header{ display: none; } }
 
-/** Styles for Posts **/
-.post{
-	margin: 0 0 5%;
+/** End Main Header **/
+
+/** Content Container **/
+.content_container{
+		margin: 0 0 5%;
 	padding: 30px 0 0;
 	position: relative;
 	overflow: hidden;	
@@ -239,15 +244,5 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 			.children{ list-style: none; }
 		}
 	}
-} 
-.single{ 
-	width: auto; 
-	padding: 5% 14%; 
-
-	.header{
-		.title{ padding-top: 0px; }
-		.meta{ margin: 20px 0; }
-	}
 }
-
-/** ---- End Post Styles ---- **/
+.single .content_container{ width: auto; padding: 5% 14% 0; }
