@@ -88,7 +88,17 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 		}
 	}
 }
-.single{ .main_header{ display: none; } }
+.single{ 
+	.main_header{ display: none; } 
+	.visible_header{
+		width: 100%;
+		position: fixed;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		opacity: 1;
+	}
+}
 
 /** End Main Header **/
 
@@ -102,7 +112,7 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 	background-repeat: no-repeat;
 	border-bottom: 10px solid $brown;
 }
-.last{ height: 650px; border-top: 10px solid $brown; }
+.last{ height: 650px; border-top: 1px solid #DDD; }
 
 .background-image + .single-tag{ 
 	margin: -35px 0 0;

@@ -75,6 +75,13 @@ p, span, em, a {
 
 .single .main_header {
   display: none; }
+.single .visible_header {
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  opacity: 1; }
 
 /** End Main Header **/
 /** Background Image **/
@@ -89,7 +96,7 @@ p, span, em, a {
 
 .last {
   height: 650px;
-  border-top: 10px solid #b58b79; }
+  border-top: 1px solid #dddddd; }
 
 .background-image + .single-tag {
   margin: -35px 0 0;

@@ -1,0 +1,1 @@
+console.log(json_posts);$(window).scroll(function(){var e=$(".main_header"),t=$(window).scrollTop(),n=$("section.content").height()-75;console.log(n);if(t>=n){event.preventDefault();$(e).addClass("visible_header");$(e).fadeIn("fast")}if(t<=n){event.preventDefault();$(e).addClass("visible_header");$(e).fadeOut("fast")}});
