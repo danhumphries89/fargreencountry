@@ -56,6 +56,44 @@
 </article>
 
 <div class="background-image last" style="background-image: url(<?php echo $secondary_source; ?>);"></div>
+<span class="single-tag features">Feature Stream</span>
+<section class="feature-stream">
+	<?php 
+
+		//get the current Post ID
+		$currentPostID = $post->ID;
+
+		//get the current category
+		$current_category = get_the_category( $post->ID );
+
+		//create and exectue query to get feature story
+		$feature_stream = new WP_Query( array(
+			'post_type' => 'post', 
+			'category_name' => $current_category[1]->name,
+			'orderby' => 'published',
+			'order' => 'ASC',
+			'posts_per_page' => '2'
+		));
+
+		//count the number of items in the query array
+		$feature_items = $feature_stream->post_count;
+
+		//basic post counter
+		$counter = 1;
+	?>
+	<?php while($feature_stream->have_posts()) : $feature_stream->the_post(); ?>
+		<article class="stream-items items<?php echo $feature_items; ?> <?php echo ($currentPostID == get_the_ID()) ? 'active' : ''; ?>">	
+			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+			<span class="date"><?php echo get_the_date(); ?></span>
+			<div class="excerpt">
+				<?php the_excerpt(); ?>
+			</div>
+		</article>
+	<?php $counter++; endwhile; wp_reset_query(); ?>
+
+</section>
+
+<div class="background-image last" style="background-image: url(<?php echo $secondary_source; ?>);"></div>
 <span class="single-tag features">Comments & Discussions</span>
 
 <section class="footer features">

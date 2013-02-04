@@ -186,6 +186,46 @@ p, span, em, a {
       margin: 0;
       padding: 0; }
 
+/** Features Story Styles **/
+.feature-stream {
+  padding: 5% 14%;
+  overflow: hidden; }
+  .feature-stream .items2 {
+    width: 43%; }
+  .feature-stream .stream-items {
+    margin-right: 5%;
+    padding: 20px;
+    float: left;
+    opacity: 0.5;
+    border-top: 5px solid #b58b79;
+    -webkit-transition: opacity linear 0.2s; }
+    .feature-stream .stream-items h2 {
+      font-size: 2em;
+      line-height: 1em; }
+      .feature-stream .stream-items h2 a {
+        color: #666;
+        text-decoration: none;
+        -webkit-transition: color linear 0.2s; }
+        .feature-stream .stream-items h2 a:hover {
+          color: #333; }
+    .feature-stream .stream-items .date {
+      margin: 10px 0 0;
+      font-size: 1.5em;
+      color: #AAA;
+      display: block; }
+    .feature-stream .stream-items .excerpt p {
+      color: #888;
+      font-size: 1em;
+      line-height: 1.5em; }
+    .feature-stream .stream-items:hover {
+      opacity: 1; }
+    .feature-stream .stream-items:last-child {
+      float: right;
+      margin-right: 0; }
+  .feature-stream .active {
+    opacity: 1; }
+
+/** Features Page Footer **/
 .footer {
   width: auto;
   padding: 20px 0 0;
