@@ -9,6 +9,18 @@ add_action( 'init', 'registerMenus' );
 /** Ensure that post-thumbnails can be added to the site **/
 add_theme_support( 'post-thumbnails' ); 
 
+/** Add Widget Items **/
+function register_footer_widget(){
+	register_sidebar(array(
+		'name' => 'Footer Widgets',
+	    'before_widget' => '',
+	    'after_widget' => '',
+	    'before_title' => '<h2 class="title">',
+	    'after_title' => '</h2>',
+	));
+}
+add_action( 'widgets_init', 'register_footer_widget' );
+
 /** Add Twitter to the Author Contact Details **/
 function add_twitter_contactmethod( $contactmethods ) {
 
