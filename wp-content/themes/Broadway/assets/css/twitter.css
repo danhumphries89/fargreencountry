@@ -1,0 +1,51 @@
+/** Font Colors **/
+/** Box Border Colors **/
+#twitter {
+  background: url("../images/speech_bubble_tag.png") 10% 80% no-repeat; }
+  #twitter .speech_bubble {
+    width: auto;
+    padding: 5%;
+    margin: 0 0 50px;
+    background: #F9F9F9;
+    color: #a1b99d;
+    overflow: hidden; }
+    #twitter .speech_bubble p {
+      margin: 0;
+      padding: 0;
+      line-height: 1.25em;
+      font-size: 1.75em; }
+    #twitter .speech_bubble .datetime {
+      font-size: 1em;
+      color: #AAA;
+      float: right; }
+    #twitter .speech_bubble a {
+      color: #AAA;
+      text-decoration: none;
+      -webkit-transition: color linear 0.2s; }
+      #twitter .speech_bubble a:hover {
+        color: #666; }
+  #twitter .name {
+    margin: 0 0 0 20px;
+    padding: 0;
+    color: #666;
+    font-size: 2em;
+    display: inline-block; }
+    #twitter .name:before {
+      margin: 0 5px;
+      content: 'by';
+      color: #AAA; }
+  #twitter .follow {
+    margin: 5px 0 0 20px;
+    padding: 0;
+    display: block; }
+    #twitter .follow a {
+      color: #888;
+      font-size: 1em;
+      text-decoration: none;
+      -webkit-transition: color linear 0.2s; }
+      #twitter .follow a:hover {
+        color: #666; }
+    #twitter .follow:before {
+      margin: 0 5px;
+      content: 'Follow:';
+      color: #AAA; }

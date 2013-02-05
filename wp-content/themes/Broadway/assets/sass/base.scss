@@ -362,3 +362,27 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 	}
 }
 .single{ article.features{ padding-bottom: 5%; } }
+
+/** Main Footer **/
+
+.main_footer{
+	padding: 5% 14%;
+	background: #DDD;
+	overflow: hidden;
+
+	.widget_section{
+		width: 50%;
+	}
+
+	.twitter_section{
+		width: 50%;
+		float: right;
+	}
+	.feature{ 
+		span{ margin: 0 0; @include little_tab_styles; background: $brown; display: inline-block; }
+		#twitter{ border-top: 5px solid $brown; } 
+	}
+}
+
+/** END MAIN FOOTER **/
+

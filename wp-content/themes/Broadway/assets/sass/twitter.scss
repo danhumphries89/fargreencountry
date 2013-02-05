@@ -1,0 +1,65 @@
+@import 'variables';
+
+#twitter{
+
+	background: url('../images/speech_bubble_tag.png') 10% 80% no-repeat;
+
+	.speech_bubble{
+		width: auto;
+		padding: 5%;
+		margin: 0 0 50px;
+		background: #F9F9F9;
+		color: $green;
+		overflow: hidden;
+
+		p{ margin: 0; padding: 0; line-height: 1.25em; font-size: 1.75em; }
+
+		.datetime{ 
+			font-size: 1em; 
+			color: #AAA; 
+			float: right; 
+		}
+
+		a{ 
+			color: #AAA; 
+			text-decoration: none;
+			-webkit-transition: color linear 0.2s;
+			&:hover{ color: #666; }
+		}
+	}
+
+	.name{
+		margin: 0 0 0 20px;
+		padding: 0;
+		color: #666;
+		font-size: 2em;
+		display: inline-block;
+
+		&:before{ 
+			margin: 0 5px;
+			content: 'by';
+			color: #AAA;
+		}
+	}
+	.follow{
+		margin: 5px 0 0 20px;
+		padding: 0;
+		display: block;
+
+		a{ 
+			color: #888; 
+			font-size: 1em; 
+			text-decoration: none; 
+			-webkit-transition: color linear 0.2s;
+
+			&:hover{ color: #666;}
+		}
+
+		&:before{
+			margin: 0 5px;
+			content: 'Follow:';
+			color: #AAA;
+		}
+		
+	}
+}

@@ -1,88 +1,68 @@
 $(window).load(function(){
 
+/** TODO: add hashtag links **/
+
+    //find the twitter section to output the data
+    var twitter_section = $('.twitter_section');
+
+    //begin the ajax request and build the output content
     $.ajax({
         url: 'https://api.twitter.com/1/statuses/user_timeline.json?include_entities=true&include_rts=true&screen_name=danhumphries89&count=1',
         dataType: 'jsonp',
         success: function(data){
             console.log(data);
+
+            //get the data and apply to array to use what we want
+            var twitter_data = {
+                'text': data[0].text,
+                'user': data[0].user.name,
+                'user_screen': data[0].user.screen_name,
+                'reply_user': data[0].in_reply_to_screen_name,
+                'created_at': data[0].created_at,
+                'user_mentions': data[0].entities.user_mentions,
+                'hashtags': data[0].entities.hashtags
+            };
+            console.log(twitter_data);
+
+            /** - MENTIONS - **/
+            //create array of mention links
+            var mention_links = new Array();
+            //loop through mentions, create link + add to array
+            for(var i=0; i<twitter_data.user_mentions.length; i++){
+
+                //get the twitter screen name for the mention
+                var mention_screen_name = twitter_data.user_mentions[i].screen_name;
+
+                //create the link
+                var link = "<a href='https://www.twitter.com/" + mention_screen_name + "' class='twitter_mention' target='_blank'>@" + mention_screen_name + "</a>";
+
+                //create regexp
+                var regExp = new RegExp("@" + mention_screen_name, "gi")
+
+                //add the link to the text
+                twitter_data.text = twitter_data.text.replace(regExp, link);
+            }
+            /** END MENTIONS **/
+
+            //create date & text elements
+            var creation_date = $('<p>').attr('class', 'datetime').text( jQuery.timeago(twitter_data.created_at) );
+            var textElement = $('<p/>').html(twitter_data.text);
+            var userElement = $('<p/>').attr('class', 'name').html(twitter_data.user);
+            var userFollow = $('<p/>').attr('class', 'follow').html("<a href='http://www.twitter.com/'" + twitter_data.user_screen + "' target='_blank'>@" + twitter_data.user_screen + "</a>");
+
+            //add items to speech bubble + add text element
+            var speech_bubble = $('<div/>').attr('class', 'speech_bubble').append( textElement, [creation_date] );
+
+            //add all items to the container element
+            var container_element  = $('<div id="twitter" class="twitter_container"/>').append( speech_bubble,[userElement, userFollow] );
+
+            //finally add all items to the twitter_section
+             $(twitter_section).append( container_element );
         }
     });
+
+//set the value of the twitter date/time to eg 10 Hours ago
+//ENSURE THE TIMEAGO SCRIPT IS LOADED
+$('#twitter .datetime').timeago();
 
 });
-/**
-    $.ajax({
-        url: 'https://api.twitter.com/1/statuses/user_timeline.json?include_entities=true&include_rts=true&screen_name=danhumphries89&count=1',
-        dataType: 'jsonp',
-        success: function(data) {
-
-            var tweets = $('#the-forge-twitter');
-            tweets.html('');
-            var status = "";
-            var row = 1;
-            
-            tweets.append("<h4 class='widgettitle'>Twitter</h4>");
-            
-            for (status in data) {
-                if (data.hasOwnProperty(status)) {
-                    
-                    if(row == 3){ row = 1; }
-                    
-                    var text_out = data[status]['text'];
-
-                    //activate the links in the text status
-                    var urls = data[status]['entities']['urls'];
-                    for(var a_url in urls){
-                        if(urls.hasOwnProperty(a_url)){
-                            var single_url = unescape(urls[a_url]['url']);
-                            var the_url = "<a href='" + unescape(urls[a_url]['expanded_url']) + "' target='_blank'>" + single_url + "</a>";
-                            var regExp = new RegExp(single_url, "gi");
-                            
-                            if((the_url != "") && (single_url != "")){
-                                var new_text = text_out.replace(regExp, the_url);
-                                text_out = new_text;
-                            }
-                        }
-                    }
-                    
-                    //link the user mentions
-                    var user_mentions = data[status]['entities']['user_mentions'];
-                    for(var mention in user_mentions){
-                        if(user_mentions.hasOwnProperty(mention)){
-                            var user_with = "@" + user_mentions[mention]['screen_name'];
-                            var link = "<a href='http://www.twitter.com/" + user_mentions[mention]['screen_name'] + "' target='_blank'>" + user_with + "</a>";
-                            var regExp = new RegExp(user_with, "gi");
-                            
-                            if((link != "") && (user_with != "")){
-                                var new_text = text_out.replace(regExp, link);
-                                text_out = new_text;
-                            }
-                        }
-                    }
-                    
-                    //change the hashtags in the text status into a string
-                    var hashtags = data[status]['entities']['hashtags'];
-                    for(var hashtag in hashtags){
-                        if(hashtags.hasOwnProperty(hashtag)){
-                            var hashtag_out = "#" + hashtags[hashtag]['text'];
-                            var hashtag_link = "<a href='http://www.twitter.com/#!/search/%23" + hashtags[hashtag]['text'] + "' target='_blank'>#" + hashtags[hashtag]['text'] + "</a>";
-                            var regExp = new RegExp(hashtag_out, "gi");
-                            
-                            if((hashtag_out != "") && (hashtag_link != "")){
-                                var new_text = text_out.replace(regExp, hashtag_link);
-                                text_out = new_text;
-                            }
-                        }
-                    }
-                    
-                    var screen_name = data[status]['user']['screen_name'];
-                    var profile_image = unescape(data[status]['user']['profile_image_url']);
-                    
-                    tweets.append("<div class='twitter_status row" + row + "'>" +
-                                  "<span class='twitter_text'>"+text_out+"</span>"+
-                                  "</div>");
-                    row++;
-                }
-            }
-        }
-    });
-**/

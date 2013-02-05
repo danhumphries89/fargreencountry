@@ -318,3 +318,24 @@ p, span, em, a {
 
 .single article.features {
   padding-bottom: 5%; }
+
+/** Main Footer **/
+.main_footer {
+  padding: 5% 14%;
+  background: #DDD;
+  overflow: hidden; }
+  .main_footer .widget_section {
+    width: 50%; }
+  .main_footer .twitter_section {
+    width: 50%;
+    float: right; }
+  .main_footer .feature span {
+    margin: 0 0;
+    padding: 5px 10px;
+    color: white;
+    background: #b58b79;
+    display: inline-block; }
+  .main_footer .feature #twitter {
+    border-top: 5px solid #b58b79; }
+
+/** END MAIN FOOTER **/
