@@ -1,0 +1,92 @@
+.widget_playing_in_the_forge .now_playing_left {
+  display: block;
+  overflow: hidden;
+  float: left;
+}
+.widget_playing_in_the_forge .lastfm_tracks {
+  max-width: 260px;
+  margin: 0 auto;
+  padding: 10px 0;
+  display: block;
+  overflow: hidden;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #222;
+}
+.widget_playing_in_the_forge .lastfm_tracks:last-child {
+  border-bottom: none;
+}
+.widget_playing_in_the_forge .lastfm_tracks img.lastfm_image {
+  width: 55px;
+  height: 55px;
+  margin: 0 0;
+  float: left;
+  border: 1px solid #ddd;
+}
+.widget_playing_in_the_forge .lastfm_tracks .lastfm_track_details {
+  display: block;
+  overflow: hidden;
+}
+.widget_playing_in_the_forge .lastfm_tracks .lastfm_track_details span {
+  width: 180px;
+  margin: 0 0 0 15px;
+  padding: 0 0 0 0;
+  float: left;
+  color: #fff;
+  text-shadow: 0 1px 1px #333;
+  font-size: 12px;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.widget_playing_in_the_forge .lastfm_tracks .lastfm_track_details span.lastfm_track_name {
+  padding-top: 2px;
+}
+.widget_playing_in_the_forge .lastfm_tracks .lastfm_track_details span.lastfm_track_nowplaying {
+  margin: 5px 0 0 15px !important;
+  padding: 0 0 0 18px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  line-height: 15px;
+  display: block;
+  background: url('http://cdn.last.fm/flatness/global/icon_eq.gif') 2px 2px no-repeat;
+}
+.widget_playing_in_the_forge .lastfm_tracks .nowplaying {
+  background: url('nowplaying_black.png') 230px 65px no-repeat;
+}
+.widget_playing_in_the_forge .lastfm_tracks .nowplaying img.lastfm_image {
+  width: 80px !important;
+  margin: 0 0;
+  border: 1px solid #aaa;
+}
+.widget_playing_in_the_forge .lastfm_tracks .nowplaying span {
+  width: 160px;
+}
+.widget_playing_in_the_forge .music_follow {
+  width: 290px;
+  margin: 0 0 0 10px;
+  display: block;
+  clear: both;
+  float: left;
+}
+.widget_playing_in_the_forge .music_follow p.music_follow_row {
+  margin: 0 0;
+  padding: 0 0 5px 0;
+  line-height: 14px;
+  overflow: hidden;
+  display: block;
+}
+.widget_playing_in_the_forge .music_follow p.music_follow_row img {
+  width: 18px;
+  margin: 0 5px 0 0;
+  float: left;
+}
+.widget_playing_in_the_forge .music_follow p.music_follow_row a {
+  font-size: 10px;
+  color: #333;
+  text-shadow: 0 1px 1px #ddd;
+  text-decoration: none;
+}
+.widget_playing_in_the_forge .music_follow p.music_follow_row a:hover {
+  text-decoration: underline;
+}

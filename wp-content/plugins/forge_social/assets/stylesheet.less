@@ -1,0 +1,101 @@
+.widget_playing_in_the_forge{
+  
+  .now_playing_left{
+    display: block;
+    overflow: hidden;
+    float: left;
+  }
+  
+  .lastfm_tracks{
+    
+    max-width: 260px;
+    margin: 0 auto;
+    padding: 10px 0;
+    display: block;
+    overflow: hidden;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #222;
+    
+    &:last-child{ border-bottom: none; }
+    
+    img.lastfm_image{
+      
+      width: 55px;
+      margin: 0 0;
+      float: left;
+      border: 1px solid #ddd;
+    }
+    
+    .lastfm_track_details{
+      
+      display: block;
+      overflow: hidden;
+    
+      span{
+        width: 180px;
+        margin: 0 0 0 15px;
+        padding: 0 0 0 0;
+        float: left;
+        color: #fff;
+        text-shadow: 0 1px 1px #333;
+        font-size: 12px;
+        font-weight: 400;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      
+      span.lastfm_track_name{ padding-top: 2px; }
+      span.lastfm_track_nowplaying{
+        margin: 10px 0 0 0 !important;
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        display: block;
+      }
+    }
+    
+    .nowplaying{
+      
+      background: url('nowplaying_black.png') 230px 65px no-repeat;
+      img.lastfm_image{
+        
+        width: 80px;
+        margin: 0 0;
+        border: 1px solid #aaa;
+      }
+      span{ width: 160px; }
+    }
+  }
+  
+  .music_follow{
+    
+    width: 290px;
+    margin: 0 0 0 10px;
+    display: block;
+    clear: both;
+    float: left;
+    
+    p.music_follow_row{
+      
+      margin: 0 0;
+      padding: 0 0 5px 0;
+      line-height: 14px;
+      overflow: hidden;
+      display: block;
+      
+      img{
+        width: 18px;
+        margin: 0 5px 0 0;
+        float: left;
+      }
+      a{
+        font-size: 10px;
+        color: #333;
+        text-shadow: 0 1px 1px #ddd;
+        text-decoration: none;
+        
+        &:hover { text-decoration: underline; }
+      }
+    }
+  }
+}
