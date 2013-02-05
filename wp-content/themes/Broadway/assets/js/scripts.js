@@ -8,28 +8,33 @@ $(window).load(function(){
 	$('.feature-stream .next').click(function(){
 		event.preventDefault();
 
-		if(clicks_counted !== clicks_limit){
+		//show the prev button when clicked
+		$('.feature-stream .prev > .button').css('visibility', 'visible');
 
+		if(clicks_counted !== clicks_limit){
 			$(feature_stream).animate({
-				left: '-=515',
-				easing: 'swing'
-			}, 300);
+				left: '-=515'
+			}, 400);
 
 			clicks_counted += 1;
 		}
+		if(clicks_counted === clicks_limit){ $('.feature-stream .next > .button').css('visibility', 'hidden'); }
 	});
 
 	$('.feature-stream .prev').click(function(){
 		event.preventDefault();
 
+		//show the next button when clicked
+		$('.feature-stream .next > .button').css('visibility', 'visible');
+
 		if($(feature_stream).css('left') !== "0px"){
 			$(feature_stream).animate({
-				left: '+=515',
-				easing: 'swing'
+				left: '+=515'
 			}, 300);
 
 			clicks_counted -= 1;
 		}else{ clicks_counted = 0; }
+		if(clicks_counted === 0){ $('.feature-stream .prev > .button').css('visibility', 'hidden'); }
 		
 	});
 
