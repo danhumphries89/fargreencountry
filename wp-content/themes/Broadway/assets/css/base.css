@@ -90,12 +90,13 @@ p, span, em, a {
   height: 510px;
   background-size: 100%;
   background-attachment: fixed;
-  background-position: 0 -80px;
+  background-position: 0 0;
   background-repeat: no-repeat;
   border-bottom: 10px solid #b58b79; }
 
 .last {
   height: 650px;
+  background-position: 0 -80px;
   border-top: 1px solid #dddddd; }
 
 .background-image + .single-tag {

@@ -85,7 +85,9 @@
 		$click_limit = ($feature_items - 2);
 	?>
 	<script type="text/javascript"> var clicks_limit = <?php echo $click_limit; ?>; </script>
-	<div class="feature_stream_buttons prev"><span class="button"></span></div>
+	
+	<?php if($feature_items > 2) : ?><div class="feature_stream_buttons prev"><span class="button"></span></div><?php endif; ?>
+
 	<div class="stream_item_container">
 		<?php while($feature_stream->have_posts()) : $feature_stream->the_post(); ?>
 			<article class="stream-items items<?php echo $feature_items; ?> <?php echo ($currentPostID == get_the_ID()) ? 'active' : ''; ?>">	
@@ -97,7 +99,9 @@
 			</article>
 		<?php $counter++; endwhile; wp_reset_query(); ?>
 	</div>
-	<div class="feature_stream_buttons next"><span class="button"></span></div>
+	
+	<?php if($feature_items > 2) : ?><div class="feature_stream_buttons next"><span class="button"></span></div><?php endif; ?>
+
 </section>
 
 <div class="background-image last" style="background-image: url(<?php echo $comments_image; ?>);"></div>

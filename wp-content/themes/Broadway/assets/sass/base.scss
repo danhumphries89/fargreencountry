@@ -108,11 +108,11 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 	height: 510px;
 	background-size: 100%;
 	background-attachment: fixed;
-	background-position: 0 -80px;
+	background-position: 0 0;
 	background-repeat: no-repeat;
 	border-bottom: 10px solid $brown;
 }
-.last{ height: 650px; border-top: 1px solid #DDD; }
+.last{ height: 650px; background-position: 0 -80px; border-top: 1px solid #DDD; }
 
 .background-image + .single-tag{ 
 	margin: -35px 0 0;
