@@ -5,9 +5,11 @@
 	//get the source if exists, split to array
 	$source = (isset($meta['source'][0])) ? explode(';', $meta['source'][0]) : "";
 
-	//get the post featured imae
+	//get the post featured images
 	$post_source = str_replace("-150x150", "", wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID )) );
-	$secondary_source = $meta['comments_featured'][0];
+	$comments_image = $meta['comments_image'][0];
+	$feature_stream_image = $meta['feature_stream_image'][0];
+
 	//get the tags for the current post
 	$tags = get_the_tags( $post->ID );
 ?>
@@ -55,7 +57,7 @@
 	</footer>
 </article>
 
-<div class="background-image last" style="background-image: url(<?php echo $secondary_source; ?>);"></div>
+<div class="background-image last" style="background-image: url(<?php echo $feature_stream_image; ?>);"></div>
 <span class="single-tag features">Feature Stream</span>
 <section class="feature-stream">
 	<?php 
@@ -98,7 +100,7 @@
 	<div class="feature_stream_buttons next"><span class="button"></span></div>
 </section>
 
-<div class="background-image last" style="background-image: url(<?php echo $secondary_source; ?>);"></div>
+<div class="background-image last" style="background-image: url(<?php echo $comments_image; ?>);"></div>
 <span class="single-tag features">Comments & Discussions</span>
 
 <section class="footer features">

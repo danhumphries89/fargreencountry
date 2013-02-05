@@ -10,13 +10,10 @@ $(window).load(function(){
 
 		if(clicks_counted !== clicks_limit){
 
-			//get the last child
-			console.log($('.stream_item_container > .stream-items:last-child').offset().left);
-
 			$(feature_stream).animate({
 				left: '-=515',
 				easing: 'swing'
-			}, 150);
+			}, 300);
 
 			clicks_counted += 1;
 		}
@@ -29,10 +26,11 @@ $(window).load(function(){
 			$(feature_stream).animate({
 				left: '+=515',
 				easing: 'swing'
-			}, 150);
-		}
-		clicks_counted = 0;
+			}, 300);
 
+			clicks_counted -= 1;
+		}else{ clicks_counted = 0; }
+		
 	});
 
 });
