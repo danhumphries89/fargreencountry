@@ -337,6 +337,8 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 					}
 				}
 
+				&:last-child{ border-bottom: none; }
+
 				.comment-content{
 					color: $normal-color;
 					font-size: 1.25em;
@@ -366,21 +368,87 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 /** Main Footer **/
 
 .main_footer{
-	padding: 5% 14%;
-	background: #DDD;
-	overflow: hidden;
 
-	.widget_section{
-		width: 50%;
+	.footer_top{
+		padding: 5% 14%;
+		background: #EEE;
+		border-top: 10px solid #DDD;
+		overflow: hidden;
+		.widget_section{
+			width: 50%;
+			margin-right: 5%;
+			float: left;
+
+			.widget{
+				margin: 0 0 5%;
+
+				h2{ margin: 0 0 20px; font-family: 'CaviarDreamsRegular'; color: $green; }
+
+				ul{
+					margin: 0;
+					padding: 0;
+					list-style: none;
+
+					li{
+						margin: 0 0 10px 20px;
+
+						a{ 
+							font-size: 1.15em; 
+							color: #888; 
+							text-decoration: none; 
+							-webkit-transition: color linear 0.2s;
+
+							&:hover{ color: #666; }
+						}
+						.post-date{ margin: 5px 0 0; font-size: 1em; color: #AAA; display: block; }
+					}
+				}
+			}
+		}
+
+		.twitter_section{
+			width: 45%;
+			float: right;
+			span{ margin: 0 0; @include little_tab_styles; display: inline-block; }
+		}
+		.feature{ 
+			span{ background: $brown; }
+			#twitter{ border-top: 5px solid $brown; } 
+		}
+		.news{
+			span{ background: #666; }
+			#twitter{ border-top: 5px solid #666; }
+		}
+		.thoughts{
+			span{ background: $green; }
+			#twitter{ border-top: 5px solid $green; }
+		}
 	}
 
-	.twitter_section{
-		width: 50%;
-		float: right;
-	}
-	.feature{ 
-		span{ margin: 0 0; @include little_tab_styles; background: $brown; display: inline-block; }
-		#twitter{ border-top: 5px solid $brown; } 
+	.footer_bottom{
+		width: auto;
+		padding: 20px 14%;
+		background: #666;
+		border-top: 10px solid #888;
+		overflow: hidden;
+
+		p{ 
+			margin: 0 10px 0 0;
+			padding:  10px 0 10px 10px; 
+			color: #CCC; 
+			font-size: 1em; 
+			float: left;
+			border-left: 1px solid #888;
+
+			a{ 
+				color: #CCC; 
+				text-decoration: none; 
+				-webkit-transition: color linear 0.1s;
+
+				&:hover{ color: #FFF; } 
+			}
+			&:first-child{ margin-left: 0px; border-left: none; }
+		}
 	}
 }
 

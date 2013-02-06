@@ -13,8 +13,8 @@ add_theme_support( 'post-thumbnails' );
 function register_footer_widget(){
 	register_sidebar(array(
 		'name' => 'Footer Widgets',
-	    'before_widget' => '',
-	    'after_widget' => '',
+	    'before_widget' => '<div class="widget %2$s">',
+	    'after_widget' => '</div>',
 	    'before_title' => '<h2 class="title">',
 	    'after_title' => '</h2>',
 	));

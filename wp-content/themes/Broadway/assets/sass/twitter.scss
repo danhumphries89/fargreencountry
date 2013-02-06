@@ -2,14 +2,12 @@
 
 #twitter{
 
-	background: url('../images/speech_bubble_tag.png') 10% 80% no-repeat;
-
 	.speech_bubble{
 		width: auto;
 		padding: 5%;
-		margin: 0 0 50px;
-		background: #F9F9F9;
-		color: $green;
+		margin: 0 0;
+		background: #FEFEFE;
+		color: #666;
 		overflow: hidden;
 
 		p{ margin: 0; padding: 0; line-height: 1.25em; font-size: 1.75em; }
@@ -30,10 +28,11 @@
 
 	.name{
 		margin: 0 0 0 20px;
-		padding: 0;
+		padding: 55px 0 0;
 		color: #666;
 		font-size: 2em;
 		display: inline-block;
+		background: url("../images/speech_bubble_tag.png") 10% 0% no-repeat;
 
 		&:before{ 
 			margin: 0 5px;

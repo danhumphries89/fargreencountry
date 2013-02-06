@@ -302,6 +302,8 @@ p, span, em, a {
             text-decoration: none; }
             .footer .comments .comments-list .comment .comment-header .reply a:hover {
               text-decoration: underline; }
+        .footer .comments .comments-list .comment:last-child {
+          border-bottom: none; }
         .footer .comments .comments-list .comment .comment-content {
           color: #666666;
           font-size: 1.25em;
@@ -320,22 +322,80 @@ p, span, em, a {
   padding-bottom: 5%; }
 
 /** Main Footer **/
-.main_footer {
+.main_footer .footer_top {
   padding: 5% 14%;
-  background: #DDD;
+  background: #EEE;
+  border-top: 10px solid #dddddd;
   overflow: hidden; }
-  .main_footer .widget_section {
-    width: 50%; }
-  .main_footer .twitter_section {
+  .main_footer .footer_top .widget_section {
     width: 50%;
+    margin-right: 5%;
+    float: left; }
+    .main_footer .footer_top .widget_section .widget {
+      margin: 0 0 5%; }
+      .main_footer .footer_top .widget_section .widget h2 {
+        margin: 0 0 20px;
+        font-family: 'CaviarDreamsRegular';
+        color: #a1b99d; }
+      .main_footer .footer_top .widget_section .widget ul {
+        margin: 0;
+        padding: 0;
+        list-style: none; }
+        .main_footer .footer_top .widget_section .widget ul li {
+          margin: 0 0 10px 20px; }
+          .main_footer .footer_top .widget_section .widget ul li a {
+            font-size: 1.15em;
+            color: #888;
+            text-decoration: none;
+            -webkit-transition: color linear 0.2s; }
+            .main_footer .footer_top .widget_section .widget ul li a:hover {
+              color: #666; }
+          .main_footer .footer_top .widget_section .widget ul li .post-date {
+            margin: 5px 0 0;
+            font-size: 1em;
+            color: #AAA;
+            display: block; }
+  .main_footer .footer_top .twitter_section {
+    width: 45%;
     float: right; }
-  .main_footer .feature span {
-    margin: 0 0;
-    padding: 5px 10px;
-    color: white;
-    background: #b58b79;
-    display: inline-block; }
-  .main_footer .feature #twitter {
+    .main_footer .footer_top .twitter_section span {
+      margin: 0 0;
+      padding: 5px 10px;
+      color: white;
+      display: inline-block; }
+  .main_footer .footer_top .feature span {
+    background: #b58b79; }
+  .main_footer .footer_top .feature #twitter {
     border-top: 5px solid #b58b79; }
+  .main_footer .footer_top .news span {
+    background: #666; }
+  .main_footer .footer_top .news #twitter {
+    border-top: 5px solid #666666; }
+  .main_footer .footer_top .thoughts span {
+    background: #a1b99d; }
+  .main_footer .footer_top .thoughts #twitter {
+    border-top: 5px solid #a1b99d; }
+.main_footer .footer_bottom {
+  width: auto;
+  padding: 20px 14%;
+  background: #666;
+  border-top: 10px solid #888888;
+  overflow: hidden; }
+  .main_footer .footer_bottom p {
+    margin: 0 10px 0 0;
+    padding: 10px 0 10px 10px;
+    color: #CCC;
+    font-size: 1em;
+    float: left;
+    border-left: 1px solid #888888; }
+    .main_footer .footer_bottom p a {
+      color: #CCC;
+      text-decoration: none;
+      -webkit-transition: color linear 0.1s; }
+      .main_footer .footer_bottom p a:hover {
+        color: #FFF; }
+    .main_footer .footer_bottom p:first-child {
+      margin-left: 0px;
+      border-left: none; }
 
 /** END MAIN FOOTER **/
