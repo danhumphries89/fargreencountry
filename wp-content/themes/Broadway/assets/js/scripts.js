@@ -46,9 +46,11 @@ function getDetails(title){
         url: "http://imdbapi.org/?ids="+title+"&type=json&plot=simple&episode=1&lang=en-US&aka=simple&release=simple&business=0&tech=0",
         dataType: 'json',
         success: function(data){
+
         	console.log(data);
 
-        	console.log(data[0].poster);
+        	//remove the loading span
+        	$('.loading').css('display', 'none');
 
         	//get the details and add to new elements
         	var poster = $('<img/>').attr({ 
@@ -66,13 +68,12 @@ function getDetails(title){
 
         	var synopsis  = $('<p/>').html(data[0].plot_simple);
 
-        	var cast = $('<ul/>').addClass('product_cast');
-
-        	for(var i=0; i<data[0].actors.length; i++){
-        		$(cast).append( $('<li/>').html( data[0].actors[i] ));
+        	//retrieve a director if one is given
+        	if(data[0].directors){
+        		var director = $('<span/>').addClass('director').html(data[0].directors[0]);
         	}
 
-        	$('.product_details').append(poster, [title, synopsis]);
+        	$('.product_details').append(poster, [title, synopsis, director]);
         }
     });
 }

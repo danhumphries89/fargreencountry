@@ -19,7 +19,10 @@
 
 <section class="thought_info">
 	<div class="section_image" style="background: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/thoughts_overlay.png') 0 0 no-repeat, url(<?php echo $post_source[0]; ?>) 0 0 no-repeat;"></div>
-	<div class="product_details"><script type="text/javascript"> getDetails('<?php echo $imdb_id; ?>'); </script> </div>
+	<div class="product_details">
+		<span class="loading">Loading...</span>
+		<script type="text/javascript"> getDetails('<?php echo $imdb_id; ?>'); </script> 
+	</div>
 </section>
 <span class="single-tag thoughts">Features</span>
 

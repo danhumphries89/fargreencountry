@@ -11,6 +11,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   line-height: 1em;
+  font-weight: normal;
   font-family: 'CaviarDreamsBold'; }
 
 p, span, em, a {
@@ -100,35 +101,52 @@ p, span, em, a {
 
 .thought_info {
   width: 100%;
-  height: 350px;
-  background: #333333;
+  height: 348px;
+  background: #333;
+  position: relative;
   overflow: hidden; }
+  .thought_info .loading {
+    color: #FFF;
+    font-size: 0.8em;
+    top: 125px;
+    left: 250px;
+    position: relative; }
   .thought_info .section_image {
     width: 750px;
     height: 500px;
     margin: 0 20px 0 0;
     float: left; }
   .thought_info .product_details {
-    margin: 20px 0 0; }
+    margin: 55px 0 0;
+    padding: 0 50px 0 0; }
     .thought_info .product_details .product_image {
       width: 150px;
       height: 220px;
       margin: 0 20px 0 0;
-      float: left; }
+      float: left;
+      border: 5px solid #222222; }
     .thought_info .product_details h2 {
-      font-size: 2.5em;
+      font-size: 2.25em;
       font-family: 'CaviarDreamsRegular'; }
       .thought_info .product_details h2 a {
+        margin: 5px 0 0;
+        display: block;
         color: #FFF;
         text-decoration: none;
-        -webkit-transition: color linear 0.2s; }
+        -webkit-transition: color linear 0.1s; }
         .thought_info .product_details h2 a:hover {
-          color: #888; }
+          color: #CCC; }
     .thought_info .product_details p {
-      padding: 0 5% 0 0;
       font-size: 1em;
       line-height: 1.5em;
-      color: #EEE; }
+      color: #DDD; }
+    .thought_info .product_details .director {
+      color: #DDD;
+      font-size: 1.5em; }
+      .thought_info .product_details .director:before {
+        content: 'Director:';
+        margin-right: 10px;
+        color: #888; }
 
 .background-image {
   border-bottom: 10px solid #b58b79; }
