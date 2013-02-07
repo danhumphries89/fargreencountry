@@ -36,7 +36,7 @@
 		<div class="meta">
 			<?php if(!empty($source)) : ?>
 			<p class="source">
-				<span class="title">Source</span>
+				<span class="title features">Source</span>
 				<a href="<?php echo trim($source[1]); ?>" target="_blank">
 					<span><?php echo $source[0]; ?></span>
 				</a>
@@ -45,7 +45,7 @@
 
 			<?php if(!empty($tags)) : ?>
 			<p class="tags">
-				<span class="title">Similar Items</span>
+				<span class="title features">Similar Items</span>
 				<?php foreach($tags as $tag) : ?>
 					<a href="<?php echo get_tag_link( $tag->term_id ); ?>">
 						<span><?php echo $tag->name; ?></span>

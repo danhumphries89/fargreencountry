@@ -10,7 +10,7 @@
 			</div>
 
 			<div class="footer_bottom">
-				<p class="copyright">&copy;2013 Far Green Country </p>
+				<p class="copyright">&copy;2013 Far Green Country - </p>
 				<p class="site">Site Design & Development by <a href="http://www.danhumphries.me" target="_blank">Dan Humphries</a></p>
 			</div>
 		</footer>

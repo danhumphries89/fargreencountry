@@ -10,7 +10,6 @@ $(window).load(function(){
         url: 'https://api.twitter.com/1/statuses/user_timeline.json?include_entities=true&include_rts=true&screen_name=danhumphries89&count=1',
         dataType: 'jsonp',
         success: function(data){
-            console.log(data);
 
             //get the data and apply to array to use what we want
             var twitter_data = {
@@ -22,7 +21,6 @@ $(window).load(function(){
                 'user_mentions': data[0].entities.user_mentions,
                 'hashtags': data[0].entities.hashtags
             };
-            console.log(twitter_data);
 
             /** - MENTIONS - **/
             //create array of mention links
@@ -61,8 +59,8 @@ $(window).load(function(){
         }
     });
 
-//set the value of the twitter date/time to eg 10 Hours ago
-//ENSURE THE TIMEAGO SCRIPT IS LOADED
-$('#twitter .datetime').timeago();
+    //set the value of the twitter date/time to eg 10 Hours ago
+    //ENSURE THE TIMEAGO SCRIPT IS LOADED
+    $('#twitter .datetime').timeago();
 
 });

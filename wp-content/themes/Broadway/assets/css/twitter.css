@@ -11,8 +11,9 @@
     margin: 0;
     padding: 0;
     line-height: 1.25em;
-    font-size: 1.75em; }
+    font-size: 1.5em; }
   #twitter .speech_bubble .datetime {
+    margin: 5px 0 0;
     font-size: 1em;
     color: #AAA;
     float: right; }
