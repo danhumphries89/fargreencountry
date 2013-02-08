@@ -11,6 +11,8 @@ $(window).load(function(){
         dataType: 'jsonp',
         success: function(data){
 
+            console.log(data);
+
             //get the data and apply to array to use what we want
             var twitter_data = {
                 'text': data[0].text,
@@ -21,6 +23,11 @@ $(window).load(function(){
                 'user_mentions': data[0].entities.user_mentions,
                 'hashtags': data[0].entities.hashtags
             };
+
+            /** - HYPERLINK - **/
+            var hyperlink_expression = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+            twitter_data.text = twitter_data.text.replace(hyperlink_expression,"<a href='$1' target='_blank'>$1</a>"); 
+            /** END HYPERLINK **/
 
             /** - MENTIONS - **/
             //create array of mention links

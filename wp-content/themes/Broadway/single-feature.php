@@ -15,7 +15,7 @@
 ?>
 
 
-<div class="background-image" style="background-image: url(<?php echo $post_source[0]; ?>);"></div>
+<div class="background-image features" style="background-image: url(<?php echo $post_source[0]; ?>);"></div>
 <span class="single-tag features">Features</span>
 
 <article class="content_container features post">
@@ -57,7 +57,7 @@
 	</footer>
 </article>
 
-<div class="background-image last" style="background-image: url(<?php echo $feature_stream_image; ?>);"></div>
+<div class="background-image features last" style="background-image: url(<?php echo $feature_stream_image; ?>);"></div>
 <span class="single-tag features">Feature Stream</span>
 <section class="feature-stream">
 	<?php 
@@ -104,7 +104,7 @@
 
 </section>
 
-<div class="background-image last" style="background-image: url(<?php echo $comments_image; ?>);"></div>
+<div class="background-image features last" style="background-image: url(<?php echo $comments_image; ?>);"></div>
 <span class="single-tag features">Comments & Discussions</span>
 
 <section class="footer features">

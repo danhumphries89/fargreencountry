@@ -1,5 +1,3 @@
-console.log(json_posts);
-
 $(window).load(function(){
 
 	var feature_stream = $('.stream_item_container');
@@ -38,6 +36,19 @@ $(window).load(function(){
 		
 	});
 
+	//navigation for product details
+	$('.product_change').click(function(){
+		//get the clicked tab items
+		var tabItem = $(this).attr('rel');
+
+		//remove the active class on all options and set inactive ones
+		$('.product_details_container .details').fadeOut();
+		$('.product_change').removeClass("active").addClass("inactive");
+
+		$('.product_details_tab' + tabItem).fadeIn();
+		$(this).addClass("active").removeClass("inactive");
+	});
+
 });
 
 function getDetails(title){
@@ -48,9 +59,6 @@ function getDetails(title){
         success: function(data){
 
         	console.log(data);
-
-        	//remove the loading span
-        	$('.loading').css('display', 'none');
 
         	//get the details and add to new elements
         	var poster = $('<img/>').attr({ 
@@ -69,11 +77,15 @@ function getDetails(title){
         	var synopsis  = $('<p/>').html(data[0].plot_simple);
 
         	//retrieve a director if one is given
-        	if(data[0].directors){
-        		var director = $('<span/>').addClass('director').html(data[0].directors[0]);
-        	}
+        	if(data[0].directors){ var director = $('<span/>').addClass('director').html(data[0].directors[0]); }
 
-        	$('.product_details').append(poster, [title, synopsis, director]);
+        	//add items to tab1
+        	$('.product_details_tab1').append(poster, [title, synopsis, director]);
+
+			//remove the loading span & fade in the product details
+        	$('.loading').css('display', 'none');
+        	$('.product_details_tab1').css('display', 'none').fadeIn('slow')
+
         }
     });
 }

@@ -85,6 +85,7 @@ p, span, em, a {
   opacity: 1; }
 
 /** End Main Header **/
+/** Home Button **/
 /** Background Image **/
 .background-image {
   width: 100%;
@@ -96,7 +97,7 @@ p, span, em, a {
 
 .last {
   height: 650px;
-  background-position: 0 -100px;
+  background-position: 0 0;
   border-top: 1px solid #dddddd; }
 
 .thought_info {
@@ -108,7 +109,7 @@ p, span, em, a {
   .thought_info .loading {
     color: #FFF;
     font-size: 0.8em;
-    top: 125px;
+    top: 100px;
     left: 250px;
     position: relative; }
   .thought_info .section_image {
@@ -116,40 +117,66 @@ p, span, em, a {
     height: 500px;
     margin: 0 20px 0 0;
     float: left; }
-  .thought_info .product_details {
+  .thought_info .details {
+    width: 40%;
     margin: 55px 0 0;
-    padding: 0 50px 0 0; }
-    .thought_info .product_details .product_image {
+    padding: 0;
+    right: 40px;
+    position: absolute; }
+    .thought_info .details .product_image {
       width: 150px;
       height: 220px;
       margin: 0 20px 0 0;
       float: left;
       border: 5px solid #222222; }
-    .thought_info .product_details h2 {
+    .thought_info .details h2 {
       font-size: 2.25em;
       font-family: 'CaviarDreamsRegular'; }
-      .thought_info .product_details h2 a {
+      .thought_info .details h2 a {
         margin: 5px 0 0;
         display: block;
         color: #FFF;
         text-decoration: none;
         -webkit-transition: color linear 0.1s; }
-        .thought_info .product_details h2 a:hover {
+        .thought_info .details h2 a:hover {
           color: #CCC; }
-    .thought_info .product_details p {
+    .thought_info .details p {
       font-size: 1em;
       line-height: 1.5em;
       color: #DDD; }
-    .thought_info .product_details .director {
+    .thought_info .details .director {
       color: #DDD;
       font-size: 1.5em; }
-      .thought_info .product_details .director:before {
+      .thought_info .details .director:before {
         content: 'Director:';
         margin-right: 10px;
         color: #888; }
+  .thought_info .navigation {
+    width: 100px;
+    right: 50px;
+    bottom: 25px;
+    position: absolute; }
+    .thought_info .navigation span {
+      width: 40px;
+      height: 10px;
+      margin: 0 10px 0 0;
+      display: block;
+      float: left;
+      background: #888;
+      cursor: pointer;
+      -webkit-transition: background linear 0.1s; }
+      .thought_info .navigation span:hover {
+        background: #888; }
+    .thought_info .navigation .active {
+      background: #888; }
+    .thought_info .navigation .inactive {
+      background: #444; }
 
-.background-image {
+.background-image.features {
   border-bottom: 10px solid #b58b79; }
+
+.background-image.thoughts {
+  border-bottom: 10px solid #a1b99d; }
 
 .thought_info {
   border-bottom: 10px solid #a1b99d; }
@@ -165,6 +192,7 @@ p, span, em, a {
 .background-image + .single-tag.features {
   background: #b58b79; }
 
+.background-image + .single-tag.thoughts,
 .thought_info + .single-tag.thoughts {
   background: #a1b99d; }
 
@@ -194,7 +222,7 @@ p, span, em, a {
     .content_container .header .title {
       padding: 5px 0 0 0;
       font-size: 4em;
-      color: #AEB29E;
+      color: #666;
       -webkit-transition: all linear 0.1s; }
     .content_container .header .meta {
       margin: 10px 0; }

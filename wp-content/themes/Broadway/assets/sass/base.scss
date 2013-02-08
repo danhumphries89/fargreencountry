@@ -102,6 +102,9 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 }
 /** End Main Header **/
 
+/** Home Button **/
+
+
 /** Background Image **/
 .background-image{
 	width: 100%;
@@ -111,7 +114,7 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 	background-position: 0 0;
 	background-repeat: no-repeat;
 }
-.last{ height: 650px; background-position: 0 -100px; border-top: 1px solid #DDD; }
+.last{ height: 650px; background-position: 0 0; border-top: 1px solid #DDD; }
 
 .thought_info{
 	width: 100%;
@@ -123,7 +126,7 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 	.loading{
 		color: #FFF;
 	    font-size: 0.8em;
-	    top: 125px;
+	    top: 100px;
 	    left: 250px;
 	    position: relative;
 	}
@@ -135,10 +138,13 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 		float: left;
 	}
 
-	.product_details{
+	.details{
 
+		width: 40%;
 		margin: 55px 0 0;
-		padding: 0 50px 0 0;
+		padding: 0;
+		right: 40px;
+		position: absolute;
 
 		.product_image{ width: 150px; height: 220px; margin: 0 20px 0 0; float: left; border: 5px solid #222; }
 
@@ -166,10 +172,34 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 			&:before{ content: 'Director:'; margin-right: 10px; color: #888; }
 		}
 	}
+
+	.navigation{
+		width: 100px;
+		right: 50px;
+		bottom: 25px;
+		position: absolute;
+
+		span{
+			width: 40px;
+			height: 10px;
+			margin: 0 10px 0 0;
+			display: block;
+			float: left;
+			background: #888;
+			cursor: pointer;
+			-webkit-transition: background linear 0.1s;
+
+			&:hover{ background: #888; }
+		}
+		.active{ background: #888; }
+		.inactive{ background: #444; }
+	}
 }
 
 
-.background-image{ border-bottom: 10px solid $brown; }
+.background-image.features{ border-bottom: 10px solid $brown; }
+.background-image.thoughts{ border-bottom: 10px solid $green; }
+
 .thought_info{ border-bottom: 10px solid $green; }
 
 .background-image + .single-tag,
@@ -181,6 +211,8 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 	left: 14%;
 }
 .background-image + .single-tag.features{ background: $brown; }
+
+.background-image + .single-tag.thoughts,
 .thought_info + .single-tag.thoughts{ background: $green; }
 
 /** Content Container **/
@@ -207,9 +239,9 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 		a{ text-decoration: none; &:hover{ .title{ color: #888; } } }
 
 		.title{ 
-			padding: 5px 0 0 0 ;
+			padding: 5px 0 0 0;
 			font-size: 4em; 
-			color: #AEB29E;
+			color: #666;
 			-webkit-transition: all linear 0.1s;
 		}
 		.meta{

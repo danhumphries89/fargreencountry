@@ -7,6 +7,7 @@
 
 	//get the post featured images
 	$post_source = str_replace("-150x150", "", wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID )) );
+	$comments_image = $meta['comments_image'][0];
 
 	//get the title of the product
 	$imdb_id = $meta['imdb_id'][0];
@@ -16,15 +17,21 @@
 
 ?>
 
-
+<script type="text/javascript"> getDetails('<?php echo $imdb_id; ?>'); </script> 
 <section class="thought_info">
 	<div class="section_image" style="background: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/thoughts_overlay.png') 0 0 no-repeat, url(<?php echo $post_source[0]; ?>) 0 0 no-repeat;"></div>
-	<div class="product_details">
-		<span class="loading">Loading...</span>
-		<script type="text/javascript"> getDetails('<?php echo $imdb_id; ?>'); </script> 
+	<div class="product_details_container">
+		<div class="product_details_tab1 details">
+			<span class="loading">Loading...</span>
+		</div>
+		<div class="product_details_tab2 details"></div>
+	</div>
+	<div class="navigation">
+		<span rel="1" class="tab1 product_change active"></span>
+		<span rel="2" class="tab2 product_change inactive"></span>
 	</div>
 </section>
-<span class="single-tag thoughts">Features</span>
+<span class="single-tag thoughts">Thoughts</span>
 
 <article class="content_container features post">
 	<header class="header">
@@ -64,6 +71,11 @@
 		</div>
 	</footer>
 </article>
+
+<?php if($comments_image != "") : ?>
+<div class="background-image thoughts last" style="background-image: url(<?php echo $comments_image; ?>);"></div>
+<span class="single-tag thoughts">Comments & Discussions</span>
+<?php endif; ?>
 
 <section class="footer features">
 	<div class="comments">
