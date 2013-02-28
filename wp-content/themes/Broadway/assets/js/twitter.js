@@ -53,7 +53,7 @@ $(window).load(function(){
             var creation_date = $('<p>').attr('class', 'datetime').text( jQuery.timeago(twitter_data.created_at) );
             var textElement = $('<p/>').html(twitter_data.text);
             var userElement = $('<p/>').attr('class', 'name').html(twitter_data.user);
-            var userFollow = $('<p/>').attr('class', 'follow').html("<a href='http://www.twitter.com/'" + twitter_data.user_screen + "' target='_blank'>@" + twitter_data.user_screen + "</a>");
+            var userFollow = $('<p/>').attr('class', 'follow').html("<a href='http://www.twitter.com/" + twitter_data.user_screen + "' target='_blank'>@" + twitter_data.user_screen + "</a>");
 
             //add items to speech bubble + add text element
             var speech_bubble = $('<div/>').attr('class', 'speech_bubble').append( textElement, [creation_date] );

@@ -55,6 +55,7 @@ function comments_callback($comment, $args, $depth){
 				?>
 			</span>
 		</p>
+		
 	</header>
 
 	<section class="comment-content"> <?php echo $comment->comment_content; ?> </section>

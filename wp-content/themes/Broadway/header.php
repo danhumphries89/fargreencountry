@@ -32,9 +32,9 @@
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/twitter.js"></script>
 	
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> style="display: none;">
 
-	<header class="main_header">
+	<header class="main_header" style="display: none;">
 		<div class="container">
 			<h1 class="title">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo_test.png" />

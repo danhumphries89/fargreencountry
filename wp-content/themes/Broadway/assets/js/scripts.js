@@ -1,5 +1,33 @@
 $(window).load(function(){
 
+	$('.wallimage').click(function(){
+		$('body').fadeOut(400);
+		window.location.href = $(this).attr('link');
+
+	})
+
+	//fade all the content into the screen
+	$('body').delay(250).fadeIn(400);
+
+	$('a').click(function(event){
+		event.preventDefault();
+		var url = $(this).attr('href');
+
+		$('body').fadeOut(400, function(){
+			window.location.href = url;
+		});
+	});
+
+	//set the featured content height to the size of the screen
+	if($('.homepage_container').length > 0){
+
+		//set the height and width for the element
+		$('.homepage_container').css({
+			'height': $(window).height(),
+			'width': $(window).width()
+		})
+	}
+
 	var feature_stream = $('.stream_item_container');
 	var clicks_counted = 0;
 

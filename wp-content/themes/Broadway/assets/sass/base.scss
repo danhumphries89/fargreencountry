@@ -28,9 +28,14 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 /** Main Header Styles **/
 .main_header{
 
-	height: 105px;
+	height: 100px;
 	background: #FCFCFC;
 	border-bottom: 1px solid #EEE;
+	-webkit-transition: opacity ease-in-out 0.2s;
+	position: relative;
+	z-index: 999;
+
+	&:hover{ opacity: 1 !important; }
 
 	.container{
 
@@ -102,7 +107,51 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 }
 /** End Main Header **/
 
-/** Home Button **/
+/** Homepage Content **/
+.featured-container{
+
+	padding: 20px 0;
+
+	.wallimage{
+
+		width: 1180px;
+		margin: 0 auto;
+		overflow: hidden;
+
+		.block{
+			width: 386px;
+			height: 350px;
+			margin: 0 10px 0 0;
+			background-position: 0 0;
+			float: left;
+
+			&:last-child{ margin-right: 0px; }
+
+			.block-content{
+				width: inherit;
+				height: inherit;
+				margin: 0;
+				position: relative;
+				top: 350px;
+				-webkit-transition: all 0.1s ease-in-out;
+
+				p{ margin: 0; color: #FFF; }
+			}
+
+		}
+		.block-2{ background-position: 50% 0; }
+		.block-3{ background-position: 98% 0; }
+
+		&:hover{ 
+			cursor: pointer;
+
+			.block-content{ top: 0; } 
+		}
+	}
+	.thoughts{ .block{ .block-content{ background: $green; } } }
+	.feature{ .block{ .block-content{ background: $brown; } } }
+}
+/** END HOMEPAGE CONTENT **/
 
 
 /** Background Image **/
@@ -244,18 +293,7 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 			color: #666;
 			-webkit-transition: all linear 0.1s;
 		}
-		.meta{
-			margin: 10px 0;
-
-			span{ font-size: 2em; color: $subheading-color; }
-			.author{
-				&:before{
-					content: 'by';
-					margin: 0 10px;
-					color: #CCC;
-				}
-			}
-		}
+		.meta{ @include content_meta; }
 	}
 
 	.content{

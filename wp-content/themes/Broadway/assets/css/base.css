@@ -25,9 +25,14 @@ p, span, em, a {
 
 /** Main Header Styles **/
 .main_header {
-  height: 105px;
+  height: 100px;
   background: #FCFCFC;
-  border-bottom: 1px solid #eeeeee; }
+  border-bottom: 1px solid #eeeeee;
+  -webkit-transition: opacity ease-in-out 0.2s;
+  position: relative;
+  z-index: 999; }
+  .main_header:hover {
+    opacity: 1 !important; }
   .main_header .container {
     padding: 20px 14% 0; }
     .main_header .container .title {
@@ -85,7 +90,45 @@ p, span, em, a {
   opacity: 1; }
 
 /** End Main Header **/
-/** Home Button **/
+/** Homepage Content **/
+.featured-container {
+  padding: 20px 0; }
+  .featured-container .wallimage {
+    width: 1180px;
+    margin: 0 auto;
+    overflow: hidden; }
+    .featured-container .wallimage .block {
+      width: 386px;
+      height: 350px;
+      margin: 0 10px 0 0;
+      background-position: 0 0;
+      float: left; }
+      .featured-container .wallimage .block:last-child {
+        margin-right: 0px; }
+      .featured-container .wallimage .block .block-content {
+        width: inherit;
+        height: inherit;
+        margin: 0;
+        position: relative;
+        top: 350px;
+        -webkit-transition: all 0.1s ease-in-out; }
+        .featured-container .wallimage .block .block-content p {
+          margin: 0;
+          color: #FFF; }
+    .featured-container .wallimage .block-2 {
+      background-position: 50% 0; }
+    .featured-container .wallimage .block-3 {
+      background-position: 98% 0; }
+    .featured-container .wallimage:hover {
+      cursor: pointer; }
+      .featured-container .wallimage:hover .block-content {
+        top: 0; }
+  .featured-container .thoughts .block .block-content {
+    background: #a1b99d; }
+  .featured-container .feature .block .block-content {
+    background: #b58b79; }
+
+/** END HOMEPAGE CONTENT **/
 /** Background Image **/
 .background-image {
   width: 100%;
