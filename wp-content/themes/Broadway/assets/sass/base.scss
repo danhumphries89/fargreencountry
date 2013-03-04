@@ -2,6 +2,8 @@
 @import 'mixins';
 
 body{ 
+	width: 100%;
+	max-width: 1920px;
 	height: 100%; 
 	margin: 0; 
 	padding: 0; 
@@ -21,7 +23,7 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 
 .container{
 	width: auto;
-	padding: 5% 14%;
+	padding: 5% 14% 0;
 	position: relative;
 }
 
@@ -29,9 +31,6 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 .main_header{
 
 	height: 100px;
-	background: #FCFCFC;
-	border-bottom: 1px solid #EEE;
-	-webkit-transition: opacity ease-in-out 0.2s;
 	position: relative;
 	z-index: 999;
 
@@ -49,14 +48,16 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 			color: $green;
 			float: left;
 
-			img{ width: 60px; float: left; }
-			.title_words{
-				margin: 0 0 0 5px;
-				padding: 0 0 0;
-				float: left;
-				line-height: 1em;
+			.home_link{
+				img{ width: 60px; float: left; }
+				.title_words{
+					margin: 0 0 0 5px;
+					padding: 0 0 0;
+					float: left;
+					line-height: 1em;
 
-				span{ display: block; }
+					span{ display: block; color: $green;}
+				}
 			}
 		}
 
@@ -94,63 +95,148 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 		}
 	}
 }
-.single{ 
-	.main_header{ display: none; } 
-	.visible_header{
-		width: 100%;
-		position: fixed;
-		z-index: 999;
-		top: 0;
-		left: 0;
-		opacity: 1;
-	}
-}
 /** End Main Header **/
 
 /** Homepage Content **/
 .featured-container{
 
-	padding: 20px 0;
+	padding: 0 0;
 
 	.wallimage{
 
-		width: 1180px;
+		width: 100%;
 		margin: 0 auto;
 		overflow: hidden;
 
 		.block{
-			width: 386px;
-			height: 350px;
-			margin: 0 10px 0 0;
-			background-position: 0 0;
-			float: left;
+			@include blockSizes;
+			background-position: 0 10%;
+			background-size: 315%;
 
 			&:last-child{ margin-right: 0px; }
 
 			.block-content{
-				width: inherit;
+				width: 100%;
 				height: inherit;
 				margin: 0;
 				position: relative;
-				top: 350px;
-				-webkit-transition: all 0.1s ease-in-out;
+				opacity: 0;
+				-webkit-transition: opacity 0.1s linear;
 
-				p{ margin: 0; color: #FFF; }
+				.the_title{
+					padding: 20px;
+					font-size: 3em;
+					color: #FFF;
+				}
+
+				h3{ 
+					padding: 20px;
+					font-size: 2em;
+					color: #FFF; 
+					font-family: 'CaviarDreamsRegular'; 
+					position: absolute;
+					bottom: 0px;
+				}
+
+				.the_date{ bottom: 35px; }
+				.the_author{
+					&:before{ content: 'by'; margin-right: 5px; color: #DDD; }
+				}
+
+				p{ 
+					margin: 0;
+					padding: 20px;
+					color: #FFF; 
+					font-size: 1.25em;
+					line-height: 1.25em;
+					position: absolute;
+					bottom: 0px;
+				}
 			}
 
 		}
-		.block-2{ background-position: 50% 0; }
-		.block-3{ background-position: 98% 0; }
+		.block-1{ z-index: 10; }
+		.block-2{ background-position: 50% 10%; z-index: 8; }
+		.block-3{ background-position: 98% 10%; z-index: 6; }
 
 		&:hover{ 
 			cursor: pointer;
 
-			.block-content{ top: 0; } 
+			.block{ .block-content{ opacity: 1; background: rgba($green, 0.75); } }
 		}
 	}
-	.thoughts{ .block{ .block-content{ background: $green; } } }
 	.feature{ .block{ .block-content{ background: $brown; } } }
+	.thoughts{ .block{ .block-content{ background: rgba($green, 0.75); } } }
 }
+
+.secondary_row{
+
+	margin: 15px 0 0;
+	padding-top: 0;
+	clear: both;
+	overflow: hidden;
+
+	.block_row{
+		margin: 0 0 20px;
+		padding-top: 0px;
+		overflow: hidden; 
+		clear: both;
+
+		.block{
+			width: 32.6%;
+			height: 250px;
+			margin: 0 1% 0 0;
+			float: left;
+			position: relative;
+			z-index: 2;
+			background-size: 150%;
+			background-position: 50% 0;
+			cursor: pointer;
+			overflow: hidden;
+
+			&:last-child{ margin-right: 0px; }
+
+			.content{
+				width: 100%;
+				height: inherit;
+				opacity: 0;
+				color: #FFF;
+				-webkit-transition: opacity 0.1s ease-in-out;
+
+				h3, h4{ padding: 10px 10px 0; font-family: 'CaviarDreamsRegular'; font-weight: normal; }
+
+				.category{ 
+					margin: 0 10px;
+					padding: 10px 0 0;
+					border-bottom: 1px solid #FFF; 
+					float: left; 
+				}
+				.title{ font-size: 2.5em; clear: both; }
+				.author{
+					font-size: 1.5em;
+					position: absolute;
+					bottom: 10px;
+
+					&:before{ content: 'by'; margin: 0 5px 0 0; color: #DDD; }
+				}
+
+				&:hover{ opacity: 1; }
+			}
+
+			.feature{ border-top: 5px solid $brown; background: rgba($brown, 0.75); }
+			.thoughts{ border-top: 5px solid $green; background: rgba($green, 0.75); }
+		}
+	}
+}
+
+.tertiary_row{
+
+}
+
+.home_items{
+	padding-top: 20px;
+}
+
 /** END HOMEPAGE CONTENT **/
 
 
@@ -158,91 +244,19 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 .background-image{
 	width: 100%;
 	height: 510px;
-	background-size: 100%;
+	background-size: 105%;
 	background-attachment: fixed;
 	background-position: 0 0;
 	background-repeat: no-repeat;
 }
-.last{ height: 650px; background-position: 0 0; border-top: 1px solid #DDD; }
+.last{ height: 650px; background-size: 125%; background-position: 50% 0; border-top: 1px solid #DDD; }
 
-.thought_info{
+.main_image{
 	width: 100%;
-	height: 348px;
-	background: #333;
-	position: relative;
-	overflow: hidden;
-
-	.loading{
-		color: #FFF;
-	    font-size: 0.8em;
-	    top: 100px;
-	    left: 250px;
-	    position: relative;
-	}
-
-	.section_image{
-		width: 750px;
-		height: 500px;
-		margin: 0 20px 0 0;
-		float: left;
-	}
-
-	.details{
-
-		width: 40%;
-		margin: 55px 0 0;
-		padding: 0;
-		right: 40px;
-		position: absolute;
-
-		.product_image{ width: 150px; height: 220px; margin: 0 20px 0 0; float: left; border: 5px solid #222; }
-
-		h2{ 
-			font-size: 2.25em;
-			font-family: 'CaviarDreamsRegular';
-
-			a{ 
-				margin: 5px 0 0;
-				display: block;
-				color: #FFF; 
-				text-decoration: none; 
-				-webkit-transition: color linear 0.1s;
-
-				&:hover{ color: #CCC; }
-			}
-		}
-
-		p{ font-size: 1em; line-height: 1.5em; color: #DDD; }
-
-		.director{
-			color: #DDD;
-			font-size: 1.5em;
-
-			&:before{ content: 'Director:'; margin-right: 10px; color: #888; }
-		}
-	}
-
-	.navigation{
-		width: 100px;
-		right: 50px;
-		bottom: 25px;
-		position: absolute;
-
-		span{
-			width: 40px;
-			height: 10px;
-			margin: 0 10px 0 0;
-			display: block;
-			float: left;
-			background: #888;
-			cursor: pointer;
-			-webkit-transition: background linear 0.1s;
-
-			&:hover{ background: #888; }
-		}
-		.active{ background: #888; }
-		.inactive{ background: #444; }
-	}
+	height: 350px;
+	background-attachment: scroll;
+	background-position: 50% 10%;
+	border-bottom: 10px solid $green;
 }
 
 
@@ -435,8 +449,6 @@ p, span, em, a{ font-family: 'CaviarDreamsRegular'; line-height: 1em; }
 			font-size: 3em; 
 			font-family: 'CaviarDreamsBold'; 
 			color: $title-color;
-			border-top: 1px solid #EEE;
-			border-bottom: 1px solid #EEE;
 			background: #FCFCFC;
 		}
 

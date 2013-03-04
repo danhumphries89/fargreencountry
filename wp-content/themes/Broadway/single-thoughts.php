@@ -17,20 +17,7 @@
 
 ?>
 
-<script type="text/javascript"> getDetails('<?php echo $imdb_id; ?>'); </script> 
-<section class="thought_info">
-	<div class="section_image" style="background: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/images/thoughts_overlay.png') 0 0 no-repeat, url(<?php echo $post_source[0]; ?>) 50% 0 no-repeat;"></div>
-	<div class="product_details_container">
-		<div class="product_details_tab1 details">
-			<span class="loading">Loading...</span>
-		</div>
-		<div class="product_details_tab2 details"></div>
-	</div>
-	<div class="navigation">
-		<span rel="1" class="tab1 product_change active"></span>
-		<span rel="2" class="tab2 product_change inactive"></span>
-	</div>
-</section>
+<div class="main_image background-image"style="background-image: url(<?php echo $post_source[0]; ?>);"></div>
 <span class="single-tag thoughts">Thoughts</span>
 
 <article class="content_container features post">

@@ -34,14 +34,16 @@
 </head>
 <body <?php body_class(); ?> style="display: none;">
 
-	<header class="main_header" style="display: none;">
+	<header class="main_header" >
 		<div class="container">
 			<h1 class="title">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo_test.png" />
-				<p class="title_words">
-					<span>Far Green</span>
-					<span>Country</span>
-				</p>
+				<a href="http://localhost:8888/fargreencountry/" class="home_link">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo_test.png" />
+					<p class="title_words">
+						<span>Far Green</span>
+						<span>Country</span>
+					</p>
+				</a>
 			</h1>
 			<?php 
 				wp_nav_menu( array(
@@ -51,8 +53,4 @@
 				)); 
 			?>
 		</div>
-
-		<?php if(!is_home()) : ?>
-			<div class="home_button">Home</div>
-		<?php endif; ?>
 	</header>

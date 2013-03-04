@@ -6,10 +6,12 @@ $(window).load(function(){
 
 	})
 
+	$('.block-1 > .block-content').css('left', '-' + $('.block-1').width());
+
 	//fade all the content into the screen
 	$('body').delay(250).fadeIn(400);
 
-	$('a').click(function(event){
+	$('a, .block-links').click(function(event){
 		event.preventDefault();
 		var url = $(this).attr('href');
 
